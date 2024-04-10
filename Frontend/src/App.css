@@ -1,0 +1,43 @@
+.bg-img-contact{
+    background-image: url("https://www.idfreshfood.com/wp-content/uploads/2017/09/contact_us_2.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  
+  }
+  .contact-card-1{
+    height: 500px;
+    border: none;
+    margin-left: 160px;
+  }
+  .input-contact::placeholder{
+  font-family: cursive;
+  }
+  .img-about-swiper {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  .img-about-swiper:hover{
+    width: 170px;
+    height: 120px;
+    border-radius: 20px;
+  
+  }
+  .about-swiper-1 {
+    margin-bottom: 50px;
+    border: none;
+    margin-top: 20px;
+  }
+  .about-text:hover {
+  
+    font-size: 50px;
+    text-shadow:0px 0px 1px grey,0px 2px grey;
+  }
+  .about-text{
+    color:rgb(24, 67, 122);
+  }
