@@ -38,9 +38,13 @@ const Navbar = () => {
       </li>
     </ul>
     <div className="col-md-3 text-end">
+    <Link to="/Cart" className=" me-5">
+        <span><i class="fa-solid fa-cart-shopping fa-lg"></i></span>
+      </Link>
       <Link to="/Login" type="button" className="btn btn-outline-primary me-2">
         Login
       </Link>
+      
       <Link to="/Signup" type="button" className="btn btn-primary me-4">
         Sign-up
       </Link>

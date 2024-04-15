@@ -14,6 +14,12 @@ import AdminLogin from "./Components/AdminLogin";
 import AdminSignup from "./Components/AdminSignup";
 import {SnackbarProvider} from "notistack"
 import Addproduct from "./Components/Admin/AddProduct";
+import AdminDashboard from "./Components/Admin/AdminDashboard";
+import ManageOrder from "./Components/Admin/ManageOrder";
+import Cart from "./Components/Cart";
+import Checkout from "./Components/Checkout";
+import ManageProduct from "./Components/Admin/ManageProduct";
+import ManageUser from "./Components/Admin/ManageUser";
 
 
 const App = () => {
@@ -29,12 +35,20 @@ const App = () => {
         <Route path="/login" element ={<Login/>}/>
         <Route path="/signup" element ={<Signup/>}/>
         <Route path="/product" element ={<Product/>}/>
+        <Route path="/Cart" element ={<Cart/>}/>
+        <Route path="/Checkout" element ={<Checkout/>}/>
+
+
        
        
         <Route path="/contact" element ={<Contact/>}/>
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
         <Route path="/AddProduct" element ={<Addproduct/>}/>
+        <Route path="/AdminDashboard" element ={<AdminDashboard/>}/>
+        <Route path="/ManageOrder" element ={<ManageOrder/>}/>
+        <Route path="/ManageProduct" element ={<ManageProduct/>}/>
+        <Route path="/ManageUser" element ={<ManageUser/>}/>
 
 
       
