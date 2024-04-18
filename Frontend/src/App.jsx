@@ -20,6 +20,7 @@ import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import ManageProduct from "./Components/Admin/ManageProduct";
 import ManageUser from "./Components/Admin/ManageUser";
+import Admin from "./Components/Admin/Index";
 
 
 const App = () => {
@@ -45,11 +46,13 @@ const App = () => {
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
         <Route path="/AddProduct" element ={<Addproduct/>}/>
-        <Route path="/AdminDashboard" element ={<AdminDashboard/>}/>
+        
         <Route path="/ManageOrder" element ={<ManageOrder/>}/>
         <Route path="/ManageProduct" element ={<ManageProduct/>}/>
         <Route path="/ManageUser" element ={<ManageUser/>}/>
-
+        <Route path="/Admin" element ={<Admin/>}>
+          <Route path="AdminDashboard" element={<AdminDashboard/>} />
+        </Route>
 
       
       </Routes>
