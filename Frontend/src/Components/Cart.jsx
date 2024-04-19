@@ -8,6 +8,7 @@ import useCartContext from './Context/CartContext';
 import {Link} from 'react-router-dom';
 >>>>>>> 4c9eae5931c262498f45927bc91db295d687dd37
 
+
 import { useParams } from 'react-router-dom';
 
 const CartPage = () => {
