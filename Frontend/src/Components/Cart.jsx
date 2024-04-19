@@ -1,7 +1,7 @@
-"use client";
+
 import React, { useEffect, useState } from 'react'
-import useCartContext from './Context/CartContext';
-import Link from 'react-router-dom';
+import useCartContext from '../Context/CartContext';
+import { Link } from 'react-router-dom';
 
 import { useParams } from 'react-router-dom';
 
@@ -48,30 +48,50 @@ const CartPage = () => {
         {/* <p alt="login form" className='rounded-start mt-4 w-25 text-center' /> */}
         <h3>Your Cart is Currently Empty!</h3>
         <p className="text-muted">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
-        <Link className="btn rounded-pill" onClick={() => setCartOpen(false)} style={{ backgroundColor: "#4BCCF2", color: "#fff" }} href={"/product"}>Return To Shop</Link>
+        <Link to="/product" className="btn rounded-pill" style={{ backgroundColor: "#4BCCF2", color: "#fff" }} >Return To Shop</Link>
       </div>
     );
     return cartItems.map((item) => (
-      <div key={item._id} className="grid grid-cols-3 mb-4">
+      <div key={item._id} className=" mb-4">
         <div className="">
-          {/* <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} /> */}
+          <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div>
-        <div className="">
-          <p className="text-muted h6">{item.pname}</p>
-          <h3>{item.title}</h3>
-          <p className="text-muted">{item.pcategory}</p>
-        </div>
-        <div className="">
+        <div className="row mb-4 d-flex justify-content-between align-items-center">
+                    <div className="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+                        className="img-fluid rounded-3"
+                        alt="Cotton T-shirt"
+                      />
+                    </div>
+                    <div className="col-md-3 col-lg-3 col-xl-3">
+                      <h6 className="text-muted">{item.pname}</h6>
+                      <h6 className="text-black mb-0">{item.pcategory}</h6>
+                    </div>
+                    <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                    <div className="">
           <div className="input-group flex">
-            <button className="bg-gray-400 rounded text-xl text-white px-3 py-2" onClick={e => addItemToCart(item)}>+ </button>
-            <input type="text" className=" w-12 px-2 text-center" value={item.quantity} />
-            <button className="bg-gray-400 rounded text-xl text-white px-3 py-2" onClick={e => removeItemFromCart(item)}>-</button>
+            <button className="btn btn-dark rounded text-xl text-white px-3 py-2" onClick={e => addItemToCart(item)}>+ </button>
+            <input type="text" className=" w-12 px-2 mx-2 text-center" value={item.quantity} />
+            <button className="btn btn-dark  rounded text-xl text-white px-3 py-2" onClick={e => removeItemFromCart(item)}>-</button>
         
           </div>
-          <h2 className="my-2"> ₹ {item.pprice}</h2>
+         
         </div>
+                    </div>
+                    <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                    <h2 className="my-2"> ₹ {item.pprice}</h2>
+                    </div>
+                    <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <a href="#!" className="text-muted">
+                        <i className="fas fa-times" />
+                      </a>
+                    </div>
+                  </div>
+                  <hr className="my-4" />
+   
       </div>
     ));
   }
@@ -79,96 +99,83 @@ const CartPage = () => {
     <>
 
 
-      <div
-        className="relative z-10"
-        aria-labelledby="slide-over-title"
-        role="dialog"
-        aria-modal="true"
-      >
-
-
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-        <div className="fixed inset-0 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-
-              <div className="pointer-events-auto w-screen max-w-md">
-                <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                  <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
-                    <div className="flex items-start justify-between">
-                      <h2
-                        className="text-lg font-medium text-gray-900"
-                        id="slide-over-title"
-                      >
-                        Shopping cart
-                      </h2>
-                      <div className="ml-3 flex h-7 items-center">
-                        <button
-                          type="button"
-                          onClick={() => setCartOpen(false)}
-                          className="relative -m-2 p-2  text-gray-400 hover:text-gray-500"
-                        >
-                          <span className="absolute -inset-0.5" />
-                          <span className="sr-only">Close panel</span>
-                          <svg
-                            className="h-6 w-6"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            aria-hidden="true"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div className="mt-8">
-                      <div className="flow-root">
-                        <ul role="list" className="-my-6 divide-y divide-gray-200">
-                          <li className="flex py-6">
-
-                            <div className="ml-4 flex flex-1 flex-col">
-                              {displayCartItems()}
-                            </div>
-                          </li>
-
-                        </ul>
-                      </div>
-                    </div>
+<section className="h-100 h-custom" style={{ backgroundColor: "#d2c9ff" }}>
+  <div className="container py-5 h-100">
+    <div className="row d-flex justify-content-center align-items-center h-100">
+      <div className="col-12">
+        <div
+          className="card card-registration card-registration-2"
+          style={{ borderRadius: 15 }}
+        >
+          <div className="card-body p-0">
+            <div className="row g-0">
+              <div className="col-lg-8">
+                <div className="p-5">
+                  <div className="d-flex justify-content-between align-items-center mb-5">
+                    <h1 className="fw-bold mb-0 text-black">Shopping Cart</h1>
                   </div>
 
-                  <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                    <div className="flex justify-between text-base font-medium text-gray-900">
-                      <p>Total: {getCartTotal()}</p>
+                  {displayCartItems()}
+                  <hr className="my-4" />
+                
+               
+                
+                  <div className="pt-5">
+                    <h6 className="mb-0">
+                      <Link to="/product" className="text-body">
+                        <i className="fas fa-long-arrow-alt-left me-2" />
+                        Back to shop
+                      </Link>
+                    </h6>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-4 bg-secondary text-white ">
+                <div className="p-5">
+                  <h3 className="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                  <hr className="my-4" />
+                  <div className="d-flex justify-content-between mb-4">
+                  <h5 className="text-uppercase">Total items</h5>
                       <p>Items: {getCartItemsCount()}</p>
-                    </div>
-
-                    <button className="bg-red-600 w-full hover:bg-red-700 rounded py-1 text-white" onClick={() => clearCart()}> Clear Cart</button>
-                    <Link href='/user/checkout'><button className="bg-blue-500 text-white mt-2 hover:bg-blue-600 w-full py-1 rounded"   onClick={() => setCartOpen(false)} >Procees to Pay</button></Link>
-                    <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                      <p>
-                        or
-                        <button
-                          type="button"
-                          className="font-medium text-indigo-600 hover:text-indigo-500"
-                        >
-                          Continue Shopping
-                          <span aria-hidden="true"> →</span>
-                        </button>
-                      </p>
+                  </div>
+                  
+                  <h5 className="text-uppercase mb-3">Give code</h5>
+                  <div className="mb-5">
+                    <div data-mdb-input-init="" className="form-outline">
+                      <input
+                        type="text"
+                        id="form3Examplea2"
+                        className="form-control form-control-lg"
+                      />
+                      <label className="form-label" htmlFor="form3Examplea2">
+                        Enter your code
+                      </label>
                     </div>
                   </div>
+                  <hr className="my-4" />
+                  <div className="d-flex justify-content-between mb-5">
+                    <h5 className="text-uppercase">Total price</h5>
+                    <p>Total: {getCartTotal()}</p>
+                  </div>
+                  <button
+                    type="button"
+                    data-mdb-button-init=""
+                    data-mdb-ripple-init=""
+                    className="btn btn-dark btn-block btn-lg"
+                    data-mdb-ripple-color="dark"
+                  >
+                    Register
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
 
 
 
