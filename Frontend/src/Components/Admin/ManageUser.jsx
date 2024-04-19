@@ -14,9 +14,9 @@ const ManageUser = () => {
           setData(data)
       }
   }
-  useEffect(() => {
-      fetchUserData()
-  }, [])
+//   useEffect(() => {
+//       fetchUserData()
+//   }, [])
 
   const deleteProduct = async (id) => {
       console.log(id);
@@ -40,28 +40,66 @@ const ManageUser = () => {
       ))
   }
 return (
-  <div>
-      <header className='bg-danger text-white'>
-          <div className="container py-5">
-              <h1>Manage User</h1>
-          </div>
-      </header>
-
-      <div className="container mt-5">
-          <table className="table table-dark">
-              <thead>
-                  <tr>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  {displayUser()}
-              </tbody>
-          </table>
+    <>
+    {/* component */}
+    <div className="text-gray-900 bg-gray-200">
+      <div className="p-4 flex">
+        <h1 className="text-3xl fw-bold">Manage User</h1>
       </div>
-  </div>
+      <div className="px-3 py-4 flex justify-center">
+        <table className="w-full text-md bg-white shadow-md rounded mb-4">
+          <tbody>
+            <tr className="border-b">
+              <th className="text-left p-3 px-5">Name</th>
+              <th className="text-left p-3 px-5">Email</th>
+              <th className="text-left p-3 px-5">Number</th>
+              <th />
+            </tr>
+            <tr className="border-b hover:bg-orange-100 bg-gray-100">
+              <td className="p-3 px-5">
+                <input
+                  type="text"
+                  defaultValue="user.name"
+                  className="bg-transparent border-b-2 border-gray-300 py-2"
+                />
+              </td>
+              <td className="p-3 px-5">
+                <input
+                  type="text"
+                  defaultValue="user.email"
+                  className="bg-transparent border-b-2 border-gray-300 py-2"
+                />
+              </td>
+              <td className="p-3 px-5">
+              <td className="p-3 px-5">
+                <input
+                  type="number"
+                  defaultValue="user.number"
+                  className="bg-transparent border-b-2 border-gray-300 py-2"
+                />
+              </td>
+              </td>
+              <td className="p-3 px-5 flex justify-end">
+                <button
+                  type="button"
+                  className="mr-3 text-sm bg-blue-500 hover:bg-blue-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Save
+                </button>
+                <button
+                  type="button"
+                  className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </>
+  
 )
 }
 

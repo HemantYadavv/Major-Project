@@ -18,11 +18,19 @@ import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import ManageProduct from "./Components/Admin/ManageProduct";
 import ManageUser from "./Components/Admin/ManageUser";
+<<<<<<< HEAD
 import { CartProvider } from "./Context/CartContext";
 import Product from "./Components/Products";
 import { AppProvider } from "./Context/AppContext";
 import ViewProduct from "./Components/viewProduct";
 import UpdateProduct from "./Components/Admin/updateProduct";
+=======
+<<<<<<< HEAD
+import Admin from "./Components/Admin/Index";
+=======
+>>>>>>> 02979180e9e4d96043dee17cb7579a6b47f93342
+>>>>>>> 385c47971e18121b4df2e54ec5eec0e92ed7eebd
+>>>>>>> 4c9eae5931c262498f45927bc91db295d687dd37
 
 
 const App = () => {
@@ -47,14 +55,20 @@ const App = () => {
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
         <Route path="/AddProduct" element ={<Addproduct/>}/>
-        <Route path="/AdminDashboard" element ={<AdminDashboard/>}/>
+        
         <Route path="/ManageOrder" element ={<ManageOrder/>}/>
         <Route path="/ManageProduct" element ={<ManageProduct/>}/>
         <Route path="/ManageUser" element ={<ManageUser/>}/>
+<<<<<<< HEAD
         <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
         <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
 
 
+=======
+        <Route path="/Admin" element ={<Admin/>}>
+          <Route path="AdminDashboard" element={<AdminDashboard/>} />
+        </Route>
+>>>>>>> 4c9eae5931c262498f45927bc91db295d687dd37
 
       
       </Routes>
