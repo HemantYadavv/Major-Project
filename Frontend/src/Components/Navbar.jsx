@@ -10,7 +10,7 @@ const Navbar = () => {
   <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between shadow  border-bottom ">
     <div className="col-md-3 mb-2 mb-md-0 px-4">
       <Link to={"/"}>
-          <img src="https://i.pinimg.com/originals/d6/0f/25/d60f25a4791d63bae523142d92896b20.png" alt="" style={{height:100, width:200}} />
+          <img src="MM2.png" alt="" style={{height:100, width:200}} />
           </Link>
     </div>
     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">

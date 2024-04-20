@@ -9,7 +9,7 @@ const Product = () => {
     // const { addItemToCart, isInCart } = useProductContext();
 
     const fetchProductList = async () => {
-        const res = await fetch("http://localhost:5000/product/getall");
+        const res = await fetch("http://localhost:3000/product/getall");
         console.log(res.status);
 
         const data = await res.json();
