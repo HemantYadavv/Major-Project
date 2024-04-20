@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 7ed11547b1d76c59922c4cd9719ac0e782d1c369
 import React, { useEffect, useState } from 'react'
-<<<<<<< HEAD
-import useCartContext from '../Context/CartContext';
-import { Link } from 'react-router-dom';
-=======
 import useCartContext from './Context/CartContext';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import {Link} from 'react-router-dom';
->>>>>>> 4c9eae5931c262498f45927bc91db295d687dd37
->>>>>>> 7ed11547b1d76c59922c4cd9719ac0e782d1c369
-
 import { useParams } from 'react-router-dom';
 
 const CartPage = () => {
