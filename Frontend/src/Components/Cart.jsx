@@ -1,7 +1,6 @@
-"use client";
 import React, { useEffect, useState } from 'react'
 import useCartContext from './Context/CartContext';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useParams } from 'react-router-dom';
 
@@ -54,7 +53,7 @@ const CartPage = () => {
     return cartItems.map((item) => (
       <div key={item._id} className="grid grid-cols-3 mb-4">
         <div className="">
-          {/* <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} /> */}
+          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div>
