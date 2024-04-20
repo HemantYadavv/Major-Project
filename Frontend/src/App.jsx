@@ -7,7 +7,7 @@ import Home from "./Components/Home";
 import './App.css';
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-// import Product from "./Components/Product";
+
 import AdminLogin from "./Components/AdminLogin";
 import AdminSignup from "./Components/AdminSignup";
 import {SnackbarProvider} from "notistack"
@@ -21,6 +21,18 @@ import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import ManageProduct from "./Components/Admin/ManageProduct";
 import ManageUser from "./Components/Admin/ManageUser";
+
+import Admin from "./Components/Admin/Index";
+
+
+import { CartProvider } from "./Components/Context/CartContext";
+
+
+import Product from "./Components/Products";
+import { AppProvider } from "./Context/AppContext";
+import ViewProduct from "./Components/viewProduct";
+import UpdateProduct from "./Components/Admin/updateProduct";
+
 import Admin from "./Components/Admin/Index";
 
 
@@ -30,6 +42,9 @@ const App = () => {
     <div>
       <BrowserRouter>
       <SnackbarProvider >
+        <CartProvider>
+
+          <AppProvider>
       <Navbar/>
       <Routes>
       <Route path="/" element ={<Home/>}/>
@@ -38,16 +53,13 @@ const App = () => {
         <Route path="/login" element ={<Login/>}/>
         <Route path="/signup" element ={<Signup/>}/>
 
-       
+        <Route path="/productList" element ={<ProductList/>}/>
+        {/* <Route path="/Products" element ={<Product />}/> */}
 
         <Route path="/product" element ={<Product/>}/>
         <Route path="/Cart" element ={<Cart/>}/>
         <Route path="/Checkout" element ={<Checkout/>}/>
 
-
-
-       
-       
         <Route path="/contact" element ={<Contact/>}/>
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
@@ -56,12 +68,19 @@ const App = () => {
         <Route path="/ManageOrder" element ={<ManageOrder/>}/>
         <Route path="/ManageProduct" element ={<ManageProduct/>}/>
         <Route path="/ManageUser" element ={<ManageUser/>}/>
+
+        <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
+        <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
         <Route path="/Admin" element ={<Admin/>}>
           <Route path="AdminDashboard" element={<AdminDashboard/>} />
         </Route>
 
       
       </Routes>
+
+      </AppProvider>
+
+      </CartProvider>
       </SnackbarProvider>
       </BrowserRouter>
 

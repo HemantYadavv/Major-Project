@@ -52,7 +52,7 @@ const Addproduct = () => {
         const fd = new FormData();
         fd.append('myfile', file);
 
-        const res = await fetch('http://localhost:3000/utilS/uploadfile', {
+        const res = await fetch('http://localhost:3000/util/uploadfile', {
             method: 'POST',
             body: fd
         })
@@ -65,6 +65,7 @@ const Addproduct = () => {
 <div className="flex items-center justify-center">
             
             <form onSubmit={addProductForm.handleSubmit} className="mb-2 w-50 m-auto mt-5 ">
+                
                 <div className="form-group">
                     <label htmlFor="pname" className="mt-5 mb-2">Name</label>
                     <input
