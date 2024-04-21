@@ -1,24 +1,12 @@
 import React, { useEffect, useState } from 'react'
-<<<<<<< HEAD
 import useCartContext from '../Context/CartContext';
-import { Link } from 'react-router-dom';
-
-
-
-=======
-import useCartContext from './Context/CartContext';
 import {Link} from 'react-router-dom';
->>>>>>> 8bbdaf1e0add83b6d671133d907f092829838ea5
 import { useParams } from 'react-router-dom';
 
 const CartPage = () => {
 
   const { id } = useParams();
 
-  const send = (e) => {
-    dispatch(addToCart(e))
-    toast.success("Item added In Your Cart")
-  }
   const [productList, setproductList] = useState([]);
 
   const fetchUserData = async () => {
@@ -59,22 +47,10 @@ const CartPage = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
-        <div className="">
-<<<<<<< HEAD
-          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
-=======
-          <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
->>>>>>> 7ed11547b1d76c59922c4cd9719ac0e782d1c369
-
-
-        </div>
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
-                      <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
-                        className="img-fluid rounded-3"
-                        alt="Cotton T-shirt"
-                      />
+          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
+                      
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-3">
                       <h6 className="text-muted">{item.pname}</h6>

@@ -7,36 +7,21 @@ import Home from "./Components/Home";
 import './App.css';
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-
 import AdminLogin from "./Components/AdminLogin";
 import AdminSignup from "./Components/AdminSignup";
 import {SnackbarProvider} from "notistack"
 import Addproduct from "./Components/Admin/AddProduct";
-
 import Product from "./Components/Products";
-
 import AdminDashboard from "./Components/Admin/AdminDashboard";
 import ManageOrder from "./Components/Admin/ManageOrder";
 import Cart from "./Components/Cart";
 import Checkout from "./Components/Checkout";
 import ManageProduct from "./Components/Admin/ManageProduct";
 import ManageUser from "./Components/Admin/ManageUser";
-
-<<<<<<< HEAD
 import { CartProvider } from "./Context/CartContext";
-=======
-import Admin from "./Components/Admin/Index";
-
-
-import { CartProvider } from "./Components/Context/CartContext";
-
-
->>>>>>> 8bbdaf1e0add83b6d671133d907f092829838ea5
-import Product from "./Components/Products";
 import { AppProvider } from "./Context/AppContext";
 import ViewProduct from "./Components/viewProduct";
 import UpdateProduct from "./Components/Admin/updateProduct";
-
 import Admin from "./Components/Admin/Index";
 
 
@@ -57,7 +42,7 @@ const App = () => {
         <Route path="/login" element ={<Login/>}/>
         <Route path="/signup" element ={<Signup/>}/>
 
-        <Route path="/productList" element ={<ProductList/>}/>
+        {/* <Route path="/productList" element ={<ProductList/>}/> */}
         {/* <Route path="/Products" element ={<Product />}/> */}
 
         <Route path="/product" element ={<Product/>}/>
@@ -75,17 +60,9 @@ const App = () => {
 
         <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
         <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
-<<<<<<< HEAD
-
         <Route path="/Admin" element ={<Admin/>}>
           <Route path="AdminDashboard" element={<AdminDashboard/>} />
         </Route>
-
-=======
-        <Route path="/Admin" element ={<Admin/>}>
-          <Route path="AdminDashboard" element={<AdminDashboard/>} />
-        </Route>
->>>>>>> 8bbdaf1e0add83b6d671133d907f092829838ea5
 
       
       </Routes>
