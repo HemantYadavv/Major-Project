@@ -1,11 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import useCartContext from './Context/CartContext';
-
-const Navbar = () => {
-  const { setCartOpen } = useCartContext();
-=======
 // import useCartContext from '../Context/CartContext';
 import useAppContext from '../Context/AppContext';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
@@ -45,7 +39,6 @@ const Navbar = () => {
       </div>
     }
   }
->>>>>>> 7ed11547b1d76c59922c4cd9719ac0e782d1c369
   return (
     <>
 
