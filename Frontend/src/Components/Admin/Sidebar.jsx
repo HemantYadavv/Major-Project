@@ -16,58 +16,52 @@ const Sidebar = () => {
       <i className=" bx bx-menu" id="btn"  />
     </div>
     <ul className="nav-list">
-      <li>
-        
-        <i className="bx bx-search" />
-        <input type="text"  placeholder="Search..." />
-        <span className="tooltip">Search</span>
-      </li>
-      <li>
-        <a href="#">
+        <li>
+        <Link to="/AdminDashboard">
           <i className="bx bx-grid-alt" />
-          <span className="links_name">Dashboard</span>
-        </a>
-        <span className="tooltip">Dashboard</span>
+          <span className="links_name">Admin Dashboard</span>
+        </Link>
+        <span className="tooltip">Admin Dashboard</span>
       </li>
       <li>
-        <a href="#">
+        <Link to="/ManageUser">
           <i className="bx bx-user" />
-          <span className="links_name">User</span>
-        </a>
-        <span className="tooltip">User</span>
+          <span className="links_name">Manage User</span>
+        </Link>
+        <span className="tooltip">Manage User</span>
       </li>
       <li>
-        <a href="#">
-          <i className="bx bx-chat" />
-          <span className="links_name">Messages</span>
-        </a>
-        <span className="tooltip">Messages</span>
+        <Link to="/AddProduct">
+          <i className="bx bxs-cart-add" />
+          <span className="links_name">Add Product</span>
+        </Link>
+        <span className="tooltip">Add Product</span>
       </li>
       <li>
-        <a href="#">
+        <Link to="/ManageProduct">
           <i className="bx bx-pie-chart-alt-2" />
-          <span className="links_name">Analytics</span>
-        </a>
-        <span className="tooltip">Analytics</span>
+          <span className="links_name">Manage Product</span>
+        </Link>
+        <span className="tooltip">Manage Product</span>
       </li>
       <li>
-        <a href="#">
+        <Link to="#">
           <i className="bx bx-folder" />
-          <span className="links_name">File Manager</span>
-        </a>
-        <span className="tooltip">Files</span>
+          <span className="links_name">Manage</span>
+        </Link>
+        <span className="tooltip">Manage</span>
       </li>
       <li>
-        <a href="#">
+        <Link to="ManageOrder">
           <i className="bx bx-cart-alt" />
-          <span className="links_name">Order</span>
-        </a>
-        <span className="tooltip">Order</span>
+          <span className="links_name">Manage Order</span>
+        </Link>
+        <span className="tooltip">Manage Order</span>
       </li>
       <li>
         <a href="#">
           <i className="bx bx-heart" />
-          <span className="links_name">Saved</span>
+          <span className="links_name"></span>
         </a>
         <span className="tooltip">Saved</span>
       </li>
@@ -81,7 +75,7 @@ const Sidebar = () => {
       <li className="profile">
         <div className="profile-details">
           <img
-            src="https://drive.google.com/uc?export=view&id=1ETZYgPpWbbBtpJnhi42_IR3vOwSOpR4z"
+            src="https://cdn.pixabay.com/photo/2017/03/16/21/18/logo-2150297_640.png"
             alt="profileImg"
           />
           <div className="name_job">
@@ -94,7 +88,7 @@ const Sidebar = () => {
     </ul>
   </div>
   <section className="home-section">
-    <div className="text">Dashboard</div>
+    <div className="text">Hello</div>
   </section>
 </>
 

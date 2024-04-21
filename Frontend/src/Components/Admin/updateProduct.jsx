@@ -25,7 +25,7 @@ const UpdateProduct = () => {
   const submitForm = async (values) => {
     console.log(values);
     values.simage = selFile;
-    const res = await fetch('http://localhost:5000/product/update/' + id, {
+    const res = await fetch('http://localhost:3000/product/update/' + id, {
       method: 'PUT',
       body: JSON.stringify(values),
       headers: {
