@@ -17,29 +17,29 @@ const Sidebar = () => {
     </div>
     <ul className="nav-list">
         <li>
-        <Link to="/AdminDashboard">
+        <Link to="/Admin/AdminDashboard">
           <i className="bx bx-grid-alt" />
           <span className="links_name">Admin Dashboard</span>
         </Link>
         <span className="tooltip">Admin Dashboard</span>
       </li>
       <li>
-        <Link to="/ManageUser">
+        <Link to="/Admin/ManageUser">
           <i className="bx bx-user" />
           <span className="links_name">Manage User</span>
         </Link>
         <span className="tooltip">Manage User</span>
       </li>
       <li>
-        <Link to="/AddProduct">
+        <Link to="/Admin/AddProduct">
           <i className="bx bxs-cart-add" />
           <span className="links_name">Add Product</span>
         </Link>
         <span className="tooltip">Add Product</span>
       </li>
       <li>
-        <Link to="/ManageProduct">
-          <i className="bx bx-pie-chart-alt-2" />
+        <Link to="/Admin/ManageProduct">
+          <i className="bx bx-pie-chart-alt-2" /> 
           <span className="links_name">Manage Product</span>
         </Link>
         <span className="tooltip">Manage Product</span>
@@ -87,9 +87,9 @@ const Sidebar = () => {
       </li>
     </ul>
   </div>
-  <section className="home-section">
+  {/* <section className="home-section">
     <div className="text">Hello</div>
-  </section>
+  </section> */}
 </>
 
   </>
