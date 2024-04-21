@@ -2,6 +2,16 @@ import React, { useEffect, useState } from 'react'
 
 import useCartContext from '../Context/CartContext';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+
+
+
+=======
+import useCartContext from './Context/CartContext';
+import {Link} from 'react-router-dom';
+>>>>>>> 8bbdaf1e0add83b6d671133d907f092829838ea5
+>>>>>>> 8b498084af633775263d23fdd804fa8899d31eeb
 import { useParams } from 'react-router-dom';
 
 const CartPage = () => {
