@@ -1,19 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button, Container } from 'react-bootstrap'; // Assuming you're using Bootstrap components
-import { XCircleIcon } from '@tabler/icons-react';
-import { useSearchParams } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
-// import Navbar from '../navbar';
-import { IconCheckCircle } from '@tabler/icons';
+import { IconCircleX } from '@tabler/icons-react';
+import { useSearchParams, Link } from 'react-router-dom'; // Assuming you're using react-router-dom for navigation
+import Navbar from './Navbar';
+import  {IconCircleCheck}  from '@tabler/icons-react';
+import useCartContext from '../Context/CartContext';
 
 const ThankYou = () => {
     const hasRun = useRef(false);
     const [currentUser, setCurrentUser] = useState(JSON.parse(sessionStorage.getItem('user')));
-    const params = useSearchParams();
+    const [params] = useSearchParams();
     const { cartItems, clearCart } = useCartContext();
 
     const savePayment = async () => {
         const paymentDetails = await retrievePaymentIntent();
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/order/add`, {
+        const response = await fetch('http://localhost:3000/order/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -66,7 +67,7 @@ const ThankYou = () => {
                     {
                         params.get('redirect_status') === 'succeeded' ?
                             <>
-                                <IconCheckCircle size={100} color={'green'} />
+                                <IconCircleCheck size={100} color={'green'} />
                                 <div style={{ textAlign: 'center', padding: '50px' }}>
                                     <h1 style={{ color: '#4CAF50' }}>Thank You For Your Purchase!</h1>
                                     <p style={{ fontSize: '18px' }}>Your order has been placed successfully.</p>
@@ -76,7 +77,7 @@ const ThankYou = () => {
                             </>
                             :
                             <>
-                                <XCircleIcon size={100} color={'red'} />
+                                <IconCircleX size={100} color={'red'} />
                                 <h2>Payment Failed</h2>
                                 <p>Your payment was not successful. Please try again.</p>
                                 <p>If the problem persists, please contact us.</p>

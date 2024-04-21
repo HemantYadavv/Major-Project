@@ -41,7 +41,7 @@ function Checkout() {
         };
         sessionStorage.setItem('shipping', JSON.stringify(shipping));
         console.log(getCartTotalAmount());
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-payment-intent`, {
+        const res = await fetch('http://localhost:3000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ function Checkout() {
                     <hr />
                     {cartItems.map(item => (
                         <div key={item.id}>
-                            <img src={`${process.env.NEXT_PUBLIC_API_URL}/${item.image[0]}`} alt={item.name} width={50} />
+                            {/* <img src={`${process.env.NEXT_PUBLIC_API_URL}/${item.image[0]}`} alt={item.name} width={50} /> */}
                             <div>
                                 <p>{item.title}</p>
                                 <p>Amount ₹{item.price} x {item.quantity}</p>
