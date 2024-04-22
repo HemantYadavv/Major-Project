@@ -13,8 +13,6 @@ import AdminSignup from "./Components/AdminSignup";
 import {SnackbarProvider} from "notistack"
 import Addproduct from "./Components/Admin/AddProduct";
 
-import Product from "./Components/Products";
-
 import AdminDashboard from "./Components/Admin/AdminDashboard";
 import ManageOrder from "./Components/Admin/ManageOrder";
 import Cart from "./Components/Cart";
@@ -22,10 +20,8 @@ import Checkout from "./Components/Checkout";
 import ManageProduct from "./Components/Admin/ManageProduct";
 import ManageUser from "./Components/Admin/ManageUser";
 
-import Admin from "./Components/Admin/Index";
 
-
-import { CartProvider } from "./Components/Context/CartContext";
+import { CartProvider } from "./Context/CartContext";
 
 
 import Product from "./Components/Products";
@@ -33,7 +29,16 @@ import { AppProvider } from "./Context/AppContext";
 import ViewProduct from "./Components/viewProduct";
 import UpdateProduct from "./Components/Admin/updateProduct";
 
+import ProductList from "./Components/ProductList";
+import Showpiece from "./Components/Showpiece";
+import Decoration from "./Components/Decoration";
+import WaterBottle from "./Components/WaterBottle";
+import Utensil from "./Components/Utensil";
 import Admin from "./Components/Admin/Index";
+// import Showpiece from "./Components/Showpieces";
+
+
+
 
 
 
@@ -52,9 +57,16 @@ const App = () => {
         <Route path="/About" element ={<About/>}/>
         <Route path="/login" element ={<Login/>}/>
         <Route path="/signup" element ={<Signup/>}/>
+       
 
         <Route path="/productList" element ={<ProductList/>}/>
-        {/* <Route path="/Products" element ={<Product />}/> */}
+       
+
+        <Route path="/Showpiece" element ={<Showpiece/>}/>
+        <Route path="/Decoration" element ={<Decoration/>}/>
+        <Route path="/WaterBottle" element ={<WaterBottle/>}/>
+        <Route path="/Utensil" element ={<Utensil/>}/>
+
 
         <Route path="/product" element ={<Product/>}/>
         <Route path="/Cart" element ={<Cart/>}/>
@@ -63,16 +75,22 @@ const App = () => {
         <Route path="/contact" element ={<Contact/>}/>
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
-        <Route path="/AddProduct" element ={<Addproduct/>}/>
         
-        <Route path="/ManageOrder" element ={<ManageOrder/>}/>
-        <Route path="/ManageProduct" element ={<ManageProduct/>}/>
-        <Route path="/ManageUser" element ={<ManageUser/>}/>
+       
+      
 
         <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
         <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
-        <Route path="/Admin" element ={<Admin/>}>
+       
+       
+        <Route path="/Admin" element ={<Admin />}>
           <Route path="AdminDashboard" element={<AdminDashboard/>} />
+          <Route path="ManageUser" element ={<ManageUser/>}/>
+        <Route path="AddProduct" element ={<Addproduct/>}/>
+        <Route path="ManageOrder" element ={<ManageOrder/>}/>
+        <Route path="ManageProduct" element ={<ManageProduct/>}/>
+
+
         </Route>
 
       
