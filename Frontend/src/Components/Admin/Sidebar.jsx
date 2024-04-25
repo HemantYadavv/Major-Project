@@ -44,13 +44,7 @@ const Sidebar = () => {
         </Link>
         <span className="tooltip">Manage Product</span>
       </li>
-      <li>
-        <Link to="#">
-          <i className="bx bx-folder" />
-          <span className="links_name">Manage</span>
-        </Link>
-        <span className="tooltip">Manage</span>
-      </li>
+
       <li>
         <Link to="/Admin/ManageOrder">
           <i className="bx bx-cart-alt" />

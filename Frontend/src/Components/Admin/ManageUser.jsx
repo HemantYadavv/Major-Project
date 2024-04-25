@@ -23,7 +23,7 @@ const ManageProduct = () => {
     }, [])
 
     //Delete func
-    const deleteFuction = async (id) => {
+    const deleteFunction = async (id) => {
         console.log(id);
 
         const res = await fetch('http://localhost:3000/user/delete/' + id, { method: 'DELETE' })
@@ -46,16 +46,13 @@ const ManageProduct = () => {
                 
                   
                     <td>
-                        <button className="btn btn-danger" onClick={() => {deleteFuction(obj._id)}}>Delete</button>
+                        <button className="btn btn-danger" onClick={() => {deleteFunction(obj._id)}}>Delete</button>
                     </td>
                    
                 </tr>
             </>
         ))
     }
-
-
-
     return (
         <div>
 

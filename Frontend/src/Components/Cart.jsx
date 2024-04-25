@@ -53,17 +53,16 @@ const Cart = () => {
       <div key={item._id} className=" mb-4">
 
     
-        <div className="row mb-4 d-flex justify-content-between align-items-center">
-                    <div className="col-md-2 col-lg-2 col-xl-2">
-          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
-                    
 
+<<<<<<< HEAD
 
         <div className="">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div>
+=======
+>>>>>>> 5e13f53b61daf29a2a30b491a813f2eade4076b9
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
@@ -82,7 +81,6 @@ const Cart = () => {
             <button className="btn btn-dark  rounded text-xl text-white px-3 py-2" onClick={e => removeItemFromCart(item)}>-</button>
         
           </div>
-         
         </div>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
@@ -95,9 +93,9 @@ const Cart = () => {
                     </div>
                   </div>
                   <hr className="my-4" />
-            </div>
-          </div>
-      </div>
+          
+       </div>
+ 
     ));
   }
   return (
@@ -162,15 +160,15 @@ const Cart = () => {
                     <h5 className="text-uppercase">Total price</h5>
                     <p>Total: {getCartTotal()}</p>
                   </div>
-                  <Link to ="/Checkout"
+                  <button
                     type="button"
                     data-mdb-button-init=""
                     data-mdb-ripple-init=""
                     className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark"
                   >
-                    Checkout
-                  </Link>
+                    Register
+                  </button>
                 </div>
               </div>
             </div>
