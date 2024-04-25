@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import useCartContext from '../Context/CartContext';
-<<<<<<< HEAD
-import {Link} from 'react-router-dom';
-=======
 import {Link} from 'react-router-dom'
->>>>>>> e755a527ff445520b3c434e8f30b14c6c2e63185
 import { useParams } from 'react-router-dom';
 
 const CartPage = () => {
@@ -51,14 +47,11 @@ const CartPage = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
-<<<<<<< HEAD
-=======
         <div className="">
           <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div>
->>>>>>> e755a527ff445520b3c434e8f30b14c6c2e63185
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
