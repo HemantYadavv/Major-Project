@@ -8,7 +8,7 @@ const Admin = () => {
     <div className=''>
       <Sidebar />
     </div>
-    {Outlet}
+    <Outlet />
     </>
   )
 }

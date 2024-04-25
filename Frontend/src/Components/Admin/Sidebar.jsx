@@ -17,28 +17,28 @@ const Sidebar = () => {
     </div>
     <ul className="nav-list">
         <li>
-        <Link to="/AdminDashboard">
+        <Link to="/Admin/AdminDashboard">
           <i className="bx bx-grid-alt" />
           <span className="links_name">Admin Dashboard</span>
         </Link>
         <span className="tooltip">Admin Dashboard</span>
       </li>
       <li>
-        <Link to="/ManageUser">
+        <Link to="/Admin/ManageUser">
           <i className="bx bx-user" />
           <span className="links_name">Manage User</span>
         </Link>
         <span className="tooltip">Manage User</span>
       </li>
       <li>
-        <Link to="/AddProduct">
+        <Link to="/Admin/AddProduct">
           <i className="bx bxs-cart-add" />
           <span className="links_name">Add Product</span>
         </Link>
         <span className="tooltip">Add Product</span>
       </li>
       <li>
-        <Link to="/ManageProduct">
+        <Link to="/Admin/ManageProduct">
           <i className="bx bx-pie-chart-alt-2" />
           <span className="links_name">Manage Product</span>
         </Link>
@@ -52,19 +52,13 @@ const Sidebar = () => {
         <span className="tooltip">Manage</span>
       </li>
       <li>
-        <Link to="ManageOrder">
+        <Link to="/Admin/ManageOrder">
           <i className="bx bx-cart-alt" />
           <span className="links_name">Manage Order</span>
         </Link>
         <span className="tooltip">Manage Order</span>
       </li>
-      <li>
-        <a href="#">
-          <i className="bx bx-heart" />
-          <span className="links_name"></span>
-        </a>
-        <span className="tooltip">Saved</span>
-      </li>
+   
       <li>
         <a href="#">
           <i className="bx bx-cog" />
