@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import useCartContext from '../Context/CartContext';
-import {Link} from 'react-router-dom'
+
+import {Link} from 'react-router-dom';
+
+
+
 import { useParams } from 'react-router-dom';
 
-const CartPage = () => {
+const Cart = () => {
 
   const { id } = useParams();
+
+
 
   const [productList, setproductList] = useState([]);
 
@@ -24,8 +30,6 @@ const CartPage = () => {
     fetchUserData();
   }, [])
 
-
-  const { setCartOpen } = useCartContext();
   const {
     cartItems,
     addItemToCart,
@@ -47,15 +51,14 @@ const CartPage = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
-        <div className="">
-          <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
+    
 
-        </div>
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
                       
+
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-3">
                       <h6 className="text-muted">{item.pname}</h6>
@@ -69,7 +72,6 @@ const CartPage = () => {
             <button className="btn btn-dark  rounded text-xl text-white px-3 py-2" onClick={e => removeItemFromCart(item)}>-</button>
         
           </div>
-         
         </div>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
@@ -82,8 +84,9 @@ const CartPage = () => {
                     </div>
                   </div>
                   <hr className="my-4" />
-   
-      </div>
+          
+       </div>
+ 
     ));
   }
   return (
@@ -107,7 +110,7 @@ const CartPage = () => {
                   </div>
 
                   {displayCartItems()}
-                  <hr className="my-4" />
+                  {/* <hr className="my-4" /> */}
                 
                
                 
@@ -174,4 +177,4 @@ const CartPage = () => {
   )
 }
 
-export default CartPage
+export default Cart

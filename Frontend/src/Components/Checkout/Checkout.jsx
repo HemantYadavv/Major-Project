@@ -8,6 +8,10 @@ import useCartContext from '../../Context/CartContext';
 import useAppContext from '../../Context/AppContext';
 import './Checkout.css';
 
+const appearance = {
+    theme: "day",
+  };
+
 const CheckoutSchema = Yup.object().shape({
     name: Yup.string().required('Required'),
     country: Yup.string().required('Required'),
@@ -21,15 +25,13 @@ const CheckoutSchema = Yup.object().shape({
 
 function Checkout() {
     const [clientSecret, setClientSecret] = useState('');
-    const { getCartTotalAmount, cartItems } = useCartContext();
+    const { getCartItemsCount,  getCartTotal ,cartItems } = useCartContext();
     const { currentUser } = useAppContext();
-
     const addressRef = useRef();
     const pincodeRef = useRef();
     const contactRef = useRef();
-
-    const stripePromise = loadStripe(' pk_test_51OYVLJSHHMuJf4FILH25HpbbABmaxKgmZsCYZcs5fV5LQj082DT92w6BbLTjWK5uXnsy0GyQMVtNsERLsi2Xt0HW00BSjil91a');
-
+    
+    const stripePromise = loadStripe('pk_test_51OfemmSAfzZtNsjPArIjjac6Mgz9TpxlhHcrFIBOG7tE4NZrWXEN9rxbQFzUZ3cJQ7mQORbyVCfCpMtqhRwIWOVL00mZBYhk3d');
     const getPaymentIntent = async () => {
         const shipping = {
             name: currentUser.name,
@@ -40,14 +42,14 @@ function Checkout() {
             },
         };
         sessionStorage.setItem('shipping', JSON.stringify(shipping));
-        console.log(getCartTotalAmount());
+        // console.log(getCartTotal());
         const res = await fetch('http://localhost:3000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                amount: getCartTotalAmount(),
+                amount: getCartTotal(),
                 customerData: shipping
             })
         });
@@ -66,11 +68,11 @@ function Checkout() {
                         <div key={item.id}>
                             {/* <img src={`${process.env.NEXT_PUBLIC_API_URL}/${item.image[0]}`} alt={item.name} width={50} /> */}
                             <div>
-                                <p>{item.title}</p>
-                                <p>Amount ₹{item.price} x {item.quantity}</p>
+                                <p>{item.pname}</p>
+                                <p>Items : {getCartItemsCount()}</p>
                             </div>
                             <div>
-                                <p> ₹{item.price * item.quantity}</p>
+                                <p>Total : ₹{getCartTotal()}</p>
                             </div>
                         </div>
                     ))}
@@ -91,14 +93,17 @@ function Checkout() {
                         </FormGroup>
                         <FormGroup>
                             <FormLabel>Shipping Address</FormLabel>
-                            <Form.Control ref={addressRef} as="textarea" rows={8} />
+                            <Form.Control ref={addressRef} style={{border:"1px solid gray"}} as="textarea" rows={8} />
                         </FormGroup>
                     </Form>
                 </Card.Body>
             </Card>
             <Button variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
             {clientSecret && (
-                <Elements stripe={stripePromise}>
+                <Elements stripe={stripePromise} options={{
+                    clientSecret,
+                    appearance
+                }}>
                     <PaymentGateway />
                 </Elements>
             )}

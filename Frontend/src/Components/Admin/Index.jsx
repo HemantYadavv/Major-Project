@@ -5,10 +5,11 @@ import { Outlet } from 'react-router-dom'
 const Admin = () => {
   return (
     <>
-    <div className=''>
+   
       <Sidebar />
-    </div>
-    {Outlet}
+   
+     <div style={{marginLeft:"100px"}}>
+    <Outlet />   </div>                  
     </>
   )
 }

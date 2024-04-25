@@ -3,8 +3,11 @@ import './Login.css';
 import { Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
+import useAppContext from '../Context/AppContext';
 
 const Login = () => {
+
+  const {setLoggedIn, setCurrentUser} = useAppContext();
 
   const loginForm = useFormik({
     initialValues: {
@@ -18,7 +21,7 @@ const Login = () => {
 
       console.log(values);
 
-      const res = await fetch('http://localhost:3000/user/add', {
+      const res = await fetch('http://localhost:3000/user/authenticate', {
         method: 'POST',
         body: JSON.stringify(values),
         headers: {
@@ -31,6 +34,11 @@ const Login = () => {
 
       if (res.status === 200) {
         toast('Login successfully')
+        setLoggedIn(true);
+        const data = await res.json();
+        console.log(data);
+        setCurrentUser(data);
+        sessionStorage.setItem("user",JSON.stringify(data));
         // navigate('/Contact');
       } else {
         toast("Something went wrong")

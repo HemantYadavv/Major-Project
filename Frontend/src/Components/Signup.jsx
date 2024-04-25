@@ -2,6 +2,7 @@ import React from 'react'
 import './Login.css';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 const Signup = () => {
 
   const signupForm = useFormik({
@@ -120,9 +121,9 @@ const Signup = () => {
             <div className='mb-4'>
             <p>
               Already have an account?{" "}
-              <a href="#!" className="link-info">
+              <Link to="/Login" className="link-info">
                 Login
-              </a>
+              </Link>
             </p>
             </div>
           </form>
