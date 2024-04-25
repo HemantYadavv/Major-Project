@@ -4,7 +4,7 @@ const mySchema = new Schema({
             pname: String,
             pdetail: String,
             pprice: Number,
-            pcategory: String,
+            category: String,
             discountprice:Number,
             image: String,
             createdAt:{

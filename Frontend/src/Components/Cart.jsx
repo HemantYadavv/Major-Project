@@ -1,11 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import useCartContext from '../Context/CartContext';
+<<<<<<< HEAD
 import {Link} from 'react-router-dom'
+=======
+
+import {Link} from 'react-router-dom';
+
+
+
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
 import { useParams } from 'react-router-dom';
 
-const CartPage = () => {
+const Cart = () => {
 
   const { id } = useParams();
+
+
 
   const [productList, setproductList] = useState([]);
 
@@ -24,8 +34,6 @@ const CartPage = () => {
     fetchUserData();
   }, [])
 
-
-  const { setCartOpen } = useCartContext();
   const {
     cartItems,
     addItemToCart,
@@ -47,15 +55,31 @@ const CartPage = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
+<<<<<<< HEAD
+=======
+
+    
+        <div className="row mb-4 d-flex justify-content-between align-items-center">
+                    <div className="col-md-2 col-lg-2 col-xl-2">
+          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
+                    
+
+
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
         <div className="">
-          <img src={'http://localhost:5000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
+          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
                       
+
                     </div>
                     <div className="col-md-3 col-lg-3 col-xl-3">
                       <h6 className="text-muted">{item.pname}</h6>
@@ -82,7 +106,8 @@ const CartPage = () => {
                     </div>
                   </div>
                   <hr className="my-4" />
-   
+            </div>
+          </div>
       </div>
     ));
   }
@@ -107,7 +132,7 @@ const CartPage = () => {
                   </div>
 
                   {displayCartItems()}
-                  <hr className="my-4" />
+                  {/* <hr className="my-4" /> */}
                 
                
                 
@@ -174,4 +199,4 @@ const CartPage = () => {
   )
 }
 
-export default CartPage
+export default Cart

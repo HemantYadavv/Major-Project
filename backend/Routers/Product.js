@@ -44,8 +44,8 @@ router.get("/getbyid/:id", (req, res) => {
 
 
 router.get("/getbycategory/:category", (req,res) => {
-  console.log(req.params.category)
-  Model.find({ pcategory: req.params.category })
+  console.log(req.params.id);
+  Model.find({ category: req.params.category })
   .then((result) => {
     res.json(result)
   }).catch((err) => {

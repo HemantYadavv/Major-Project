@@ -39,7 +39,11 @@ const Sidebar = () => {
       </li>
       <li>
         <Link to="/Admin/ManageProduct">
+<<<<<<< HEAD
           <i className="bx bx-pie-chart-alt-2" />
+=======
+          <i className="bx bx-pie-chart-alt-2" /> 
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
           <span className="links_name">Manage Product</span>
         </Link>
         <span className="tooltip">Manage Product</span>
@@ -81,9 +85,9 @@ const Sidebar = () => {
       </li>
     </ul>
   </div>
-  <section className="home-section">
+  {/* <section className="home-section">
     <div className="text">Hello</div>
-  </section>
+  </section> */}
 </>
 
   </>
