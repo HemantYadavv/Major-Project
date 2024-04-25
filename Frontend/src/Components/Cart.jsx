@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import useCartContext from '../Context/CartContext';
+<<<<<<< HEAD
+import {Link} from 'react-router-dom'
+=======
 
 import {Link} from 'react-router-dom';
 
 
 
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
 import { useParams } from 'react-router-dom';
 
 const Cart = () => {
@@ -51,6 +55,8 @@ const Cart = () => {
     );
     return cartItems.map((item) => (
       <div key={item._id} className=" mb-4">
+<<<<<<< HEAD
+=======
 
     
         {/* <div className="row mb-4 d-flex justify-content-between align-items-center">
@@ -59,13 +65,26 @@ const Cart = () => {
                     
          
 
+<<<<<<< HEAD
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
         </div> */}
+=======
 
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
+        <div className="">
+          <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
+
+
+        </div>
+<<<<<<< HEAD
+=======
+>>>>>>> dfc9ef2c40b9855d6f01e98943385726f8b5b56e
+
+>>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
@@ -164,15 +183,15 @@ const Cart = () => {
                     <h5 className="text-uppercase">Total price</h5>
                     <p>Total: {getCartTotal()}</p>
                   </div>
-                  <button
+                  <Link to ="/Checkout"
                     type="button"
                     data-mdb-button-init=""
                     data-mdb-ripple-init=""
                     className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark"
                   >
-                    Register
-                  </button>
+                    Checkout
+                  </Link>
                 </div>
               </div>
             </div>

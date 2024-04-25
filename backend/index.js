@@ -9,7 +9,7 @@ const UtilRouter = require('./Routers/Utils')
 const contactRouter = require('./Routers/contact')
 const orderRouter = require('./Routers/Order')
 
-const stripe = require('stripe')('sk_test_51OYVLJSHHMuJf4FIU73CE1EXUqBOtSaFTmRS87JO2HT18483Z8qIKFnW8DC2mHPtlQjmVPcxU7N8JRkDrbNEiKTg00iZUNjx1O');
+const stripe = require('stripe')('sk_test_51OfemmSAfzZtNsjP4i4NDmJLu0PdgEFyMhNsU0FK8o9PhUqw9byqqkw8PMjxYktyqeyAYEnmqbB4SX0YA3VGusA800cm1C368f');
 
 // middleware
 app.use(express.json());
