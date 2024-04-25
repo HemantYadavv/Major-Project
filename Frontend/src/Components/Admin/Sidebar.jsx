@@ -39,11 +39,7 @@ const Sidebar = () => {
       </li>
       <li>
         <Link to="/Admin/ManageProduct">
-<<<<<<< HEAD
-          <i className="bx bx-pie-chart-alt-2" />
-=======
           <i className="bx bx-pie-chart-alt-2" /> 
->>>>>>> 0871014a0b70a0d10db1bad19cafd91c23e65c1e
           <span className="links_name">Manage Product</span>
         </Link>
         <span className="tooltip">Manage Product</span>
@@ -56,8 +52,6 @@ const Sidebar = () => {
         </Link>
         <span className="tooltip">Manage Order</span>
       </li>
-<<<<<<< HEAD
-=======
    
       <li>
         <a href="#">
@@ -66,7 +60,6 @@ const Sidebar = () => {
         </a>
         <span className="tooltip">Setting</span>
       </li>
->>>>>>> dfc9ef2c40b9855d6f01e98943385726f8b5b56e
       <li className="profile">
         <div className="profile-details">
           <img
