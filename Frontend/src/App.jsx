@@ -32,7 +32,7 @@ import Admin from "./Components/Admin/Index";
 
 import { CartProvider } from "./Context/CartContext";
 
- import { AppProvider } from "./Context/AppContext";
+
 import ViewProduct from "./Components/viewProduct";
 // import ThankYou from "./Components/Thankyou";
 import UpdateProduct from "./Components/Admin/updateProduct";
@@ -49,73 +49,16 @@ import { AppProvider } from "./Context/AppContext";
 // import Showpiece from "./Components/Showpieces";
 
 
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> 5e13f53b61daf29a2a30b491a813f2eade4076b9
 const App = () => {
   return (
     <div>
       <BrowserRouter>
-<<<<<<< HEAD
-
-        <SnackbarProvider >
-          <CartProvider>
-
-            <AppProvider>
-            <Navbar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-
-              <Route path="/About" element={<About />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-
-
-
-              <Route path="/productList" element={<ProductList />} />
-
-
-              <Route path="/Showpiece" element={<Showpiece />} />
-              <Route path="/Decoration" element={<Decoration />} />
-              <Route path="/WaterBottle" element={<WaterBottle />} />
-              <Route path="/Utensil" element={<Utensil />} />
-
-
-              {/* <Route path="/productList" element ={<ProductList/>}/> */}
-              {/* <Route path="/Products" element ={<Product />}/> */}
-
-
-              <Route path="/product" element={<Product />} />
-              <Route path="/Cart" element={<Cart />} />
-              <Route path="/Checkout" element ={<Checkout/>}/>
-
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/adminlogin" element={<AdminLogin />} />
-              <Route path="/adminsignup" element={<AdminSignup />} />
-              <Route path="/viewProduct/:id" element={<ViewProduct />} />
-              <Route path="/updateProduct/:id" element={<UpdateProduct />} />
-
-
-              <Route path="/Admin" element={<Admin />}>
-                <Route path="AdminDashboard" element={<AdminDashboard />} />
-                <Route path="ManageUser" element={<ManageUser />} />
-                <Route path="AddProduct" element={<Addproduct />} />
-                <Route path="ManageOrder" element={<ManageOrder />} />
-                <Route path="ManageProduct" element={<ManageProduct />} />
-
-              </Route>
-            </Routes>
-            </AppProvider>
-          </CartProvider>
-        </SnackbarProvider>
-
-=======
 
 
       <SnackbarProvider >
@@ -179,7 +122,6 @@ const App = () => {
       </SnackbarProvider>
 
 
->>>>>>> 5e13f53b61daf29a2a30b491a813f2eade4076b9
       </BrowserRouter>
 
     </div>
