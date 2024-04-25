@@ -58,8 +58,6 @@ const Product = () => {
         <>
             <div>
                 <form>
-
-
                     <div class="input-group mb-5 my-3 bg-dark w-75 mx-auto bg-opacity-25 rounded">
                         <input type="search" required=""
                             onChange={filterproduct} className="form-control " placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" />

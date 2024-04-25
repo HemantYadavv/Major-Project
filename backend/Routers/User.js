@@ -10,6 +10,17 @@ router.post('/add', (req, res) => {
     }).catch((err) => {
         res.status(500).json(err)
     });
-})
+});
+router.get('/getall',(req,res) => {
+    // empty brackets will give all the data from the database
+    Model.find({})
+    .then((result) => {
+        res.json(result)
+    }).catch((err) => {
+        console.error(err)
+        res.status(500).json(err)
+    });
+    
+});
 
 module.exports = router;

@@ -32,7 +32,7 @@ import Admin from "./Components/Admin/Index";
 
 import { CartProvider } from "./Context/CartContext";
 
-// import { AppProvider } from "./Context/AppContext";
+ import { AppProvider } from "./Context/AppContext";
 import ViewProduct from "./Components/viewProduct";
 // import ThankYou from "./Components/Thankyou";
 import UpdateProduct from "./Components/Admin/updateProduct";
@@ -61,7 +61,7 @@ const App = () => {
       <SnackbarProvider >
         <CartProvider>
 
-          {/* <AppProvider> */}
+          <AppProvider>
       <Navbar/>
       <Routes>
       <Route path="/" element ={<Home/>}/>
@@ -113,49 +113,10 @@ const App = () => {
       
       </Routes>
 
-      {/* </AppProvider> */}
+      </AppProvider>
 
       </CartProvider>
       </SnackbarProvider>
-
-        <SnackbarProvider >
-          <CartProvider>
-            {/* <AppProvider> */}
-              <Navbar />
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/About" element={<About />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/product" element={<Product />} />
-                <Route path="/Cart" element={<Cart />} />
-            
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/adminlogin" element={<AdminLogin />} />
-                <Route path="/adminsignup" element={<AdminSignup />} />
-                <Route path="/AddProduct" element={<Addproduct />} />
-               
-                {/* <Route path="/Thankyou" element={<ThankYou />} /> */}
-                <Route path="/ManageOrder" element={<ManageOrder />} />
-                <Route path="/ManageProduct" element={<ManageProduct />} />
-                <Route path="/ManageUser" element={<ManageUser />} />
-                <Route path="/viewProduct/:id" element={<ViewProduct />} />
-                <Route path="/Admin" element={<Admin />}>
-                  <Route path="AdminDashboard" element={<AdminDashboard />} />
-                </Route>
-                <Route path="/viewProduct/:id" element={<ViewProduct />} />
-                <Route path="/updateProduct/:id" element={<UpdateProduct />} />
-                <Route path="/Admin" element={<Admin />}>
-                  <Route path="AdminDashboard" element={<AdminDashboard />} />
-                </Route>
-                <Route path="/Admin" element={<Admin />}>
-                  <Route path="AdminDashboard" element={<AdminDashboard />} />
-                </Route>
-              </Routes>
-            {/* </AppProvider> */}
-          </CartProvider>
-        </SnackbarProvider>
-
       </BrowserRouter>
 
     </div>

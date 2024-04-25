@@ -44,33 +44,13 @@ const Sidebar = () => {
         </Link>
         <span className="tooltip">Manage Product</span>
       </li>
-      <li>
-        <Link to="#">
-          <i className="bx bx-folder" />
-          <span className="links_name">Manage</span>
-        </Link>
-        <span className="tooltip">Manage</span>
-      </li>
+
       <li>
         <Link to="ManageOrder">
           <i className="bx bx-cart-alt" />
           <span className="links_name">Manage Order</span>
         </Link>
         <span className="tooltip">Manage Order</span>
-      </li>
-      <li>
-        <a href="#">
-          <i className="bx bx-heart" />
-          <span className="links_name"></span>
-        </a>
-        <span className="tooltip">Saved</span>
-      </li>
-      <li>
-        <a href="#">
-          <i className="bx bx-cog" />
-          <span className="links_name">Setting</span>
-        </a>
-        <span className="tooltip">Setting</span>
       </li>
       <li className="profile">
         <div className="profile-details">

@@ -53,17 +53,18 @@ const Cart = () => {
       <div key={item._id} className=" mb-4">
 
     
-        <div className="row mb-4 d-flex justify-content-between align-items-center">
+        {/* <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
                     
+         
 
-
-        <div className="">
+        <div className="row mb-4 d-flex justify-content-between align-items-center">
+                    <div className="col-md-2 col-lg-2 col-xl-2">
           <img src={'http://localhost:3000/' + item.image} alt="" className="w-auto mx-auto  h-24  py-1 " style={{ objectFit: "cover" }} />
 
 
-        </div>
+        </div> */}
 
         <div className="row mb-4 d-flex justify-content-between align-items-center">
                     <div className="col-md-2 col-lg-2 col-xl-2">
@@ -83,7 +84,6 @@ const Cart = () => {
             <button className="btn btn-dark  rounded text-xl text-white px-3 py-2" onClick={e => removeItemFromCart(item)}>-</button>
         
           </div>
-         
         </div>
                     </div>
                     <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
@@ -97,8 +97,9 @@ const Cart = () => {
                   </div>
                   <hr className="my-4" />
             </div>
-          </div>
-      </div>
+      //     </div>
+      // </div>
+      // </div>
     ));
   }
   return (
