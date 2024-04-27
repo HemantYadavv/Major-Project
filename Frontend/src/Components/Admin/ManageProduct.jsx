@@ -42,11 +42,7 @@ const ManageProduct = () => {
                     <td>{obj.pname}</td>
                     <td>{obj.pcategory}</td>
                     <td>{obj.pprice}</td>
-
-
                     <td>{obj.pdetail}</td>
-                
-                  
                     <td>
                         <button className="btn btn-danger" onClick={() => {deleteFuction(obj._id)}}>Delete</button>
                     </td>
@@ -58,6 +54,11 @@ const ManageProduct = () => {
         ))
     }
 
+<<<<<<< HEAD
+=======
+
+ 
+>>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
     return (
         <div>
 

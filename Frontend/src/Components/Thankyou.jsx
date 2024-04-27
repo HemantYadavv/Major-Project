@@ -18,7 +18,7 @@ const ThankYou = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-auth-token': currentUser.token
+                'x-auth-token': (JSON.parse(sessionStorage.getItem('user')))
             },
             body: JSON.stringify({
                 items: cartItems,
@@ -37,7 +37,7 @@ const ThankYou = () => {
     };
 
     const retrievePaymentIntent = async () => {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/retrieve-payment-intent`, {
+        const response = await fetch('http://localhost:3000/retrieve-payment-intent', {
             method: 'POST',
             body: JSON.stringify({ paymentIntentId: params.get('payment_intent') }),
             headers: {
@@ -61,7 +61,11 @@ const ThankYou = () => {
 
     return (
         <div>
+<<<<<<< HEAD
        
+=======
+          
+>>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
             <Container fluid="md">
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', flexDirection: 'column' }}>
                     {
