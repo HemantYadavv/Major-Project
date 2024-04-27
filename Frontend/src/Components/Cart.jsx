@@ -151,15 +151,15 @@ const Cart = () => {
                     <h5 className="text-uppercase">Total price</h5>
                     <p>Total: {getCartTotal()}</p>
                   </div>
-                  <button
+                  <Link to ='/Checkout'
                     type="button"
                     data-mdb-button-init=""
                     data-mdb-ripple-init=""
                     className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark"
                   >
-                    Register
-                  </button>
+                    Checkout
+                  </Link>
                 </div>
               </div>
             </div>

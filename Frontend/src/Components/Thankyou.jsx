@@ -61,7 +61,7 @@ const ThankYou = () => {
 
     return (
         <div>
-            <Navbar />
+       
             <Container fluid="md">
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', flexDirection: 'column' }}>
                     {

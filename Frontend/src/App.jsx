@@ -43,6 +43,8 @@ import Showpiece from "./Components/Showpiece";
 import Decoration from "./Components/Decoration";
 import WaterBottle from "./Components/WaterBottle";
 import Utensil from "./Components/Utensil";
+import Checkout from "./Components/Checkout/Checkout";
+import ThankYou from "./Components/Thankyou";
 
 // import Showpiece from "./Components/Showpieces";
 
@@ -93,7 +95,8 @@ const App = () => {
         <Route path="/contact" element ={<Contact/>}/>
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
-        
+        <Route path="/Checkout" element ={<Checkout/>}/>
+        <Route path="/thankyou" element = {<ThankYou />}/>
        
       
 

@@ -45,13 +45,15 @@ const PaymentGateway = () => {
     };
 
     return (
-        <div className='"max-w-sm rounded overflow-hidden shadow-lg"'  withBorder p={30} mt={30}>
+        <div className="container mt-3">
+        <div className='"max-w-sm rounded overflow-hidden mt-2 shadow-lg"'  withBorder p={30} mt={30}>
             
             <form onSubmit={handleSubmit}>
-                <h1 order={3} my={30} mx="auto">Secure Payment Gateway</h1>
+                <h1 order={3} my={30} mx="auto" className='mb-2'>Secure Payment Gateway</h1>
                 <PaymentElement />
-                <button disabled={!stripe} type="submit" variant='filled' mt={20}>Submit</button>
+                <button disabled={!stripe}  className="btn btn-primary mb-2 mt-3" type="submit" variant='filled' mt={20}>Submit</button>
             </form>
+        </div>
         </div>
     )
 }

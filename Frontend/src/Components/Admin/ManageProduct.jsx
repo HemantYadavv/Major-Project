@@ -58,8 +58,6 @@ const ManageProduct = () => {
         ))
     }
 
-
-
     return (
         <div>
 
