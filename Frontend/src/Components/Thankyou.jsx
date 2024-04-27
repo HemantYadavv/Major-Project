@@ -18,7 +18,7 @@ const ThankYou = () => {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'x-auth-token': currentUser.token
+                'x-auth-token': (JSON.parse(sessionStorage.getItem('user')))
             },
             body: JSON.stringify({
                 items: cartItems,

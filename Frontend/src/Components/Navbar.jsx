@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import useCartContext from '../Context/CartContext';
+import useCartContext from '../Context/CartContext';
 import useAppContext from '../Context/AppContext';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Navbar = () => {
   const { loggedIn, logout } = useAppContext();
-  // const { getCartItemsCount } = useCartContext();
+  const { getCartItemsCount } = useCartContext();
   console.log(loggedIn);
 
   const showLoggedin = () => {
@@ -79,8 +79,9 @@ const Navbar = () => {
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               
              >
-              <AiOutlineShoppingCart className='text-2xl'  />
-
+             <p className='d-flex'>
+            <span> <AiOutlineShoppingCart className='text-2xl'  /></span> 
+<span className='badge badge-notification bg-danger rounded text-white' style={{fontSize:"12px"}}>{getCartItemsCount()}</span></p>
               </button></Link>
             </li>
             <li>

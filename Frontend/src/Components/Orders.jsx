@@ -10,7 +10,7 @@ const OrderHistory = () => {
     setLoading(true);
     const response = await fetch('http://localhost:3000/order/getbyuser', {
       headers: {
-        'x-auth-token': '77aea14d12f428f6d20e384ae8f216cd'
+        'x-auth-token': (JSON.parse(sessionStorage.getItem('user')))
       }
     });
     const data = await response.json();
