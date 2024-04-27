@@ -5,32 +5,21 @@ import useAppContext from '../../Context/AppContext';
 
 const PaymentGateway = () => {
 
-    const {currentUser, setCurrentUser} = useAppContext();
-
+    const { currentUser, setCurrentUser } = useAppContext();
     const stripe = useStripe();
     const elements = useElements();
 
     const handleSubmit = async (event) => {
-        // We don't want to let default form submission happen here,
-        // which would refresh the page.
         event.preventDefault();
-
-
-
         if (!stripe || !elements) {
             console.log('stripe not loaded');
-            // Stripe.js hasn't yet loaded.
-            // Make sure to disable form submission until Stripe.js has loaded.
             return;
         }
-
         const result = await stripe.confirmPayment({
-            //`Elements` instance that was used to create the Payment Element
             elements,
             confirmParams: {
                 return_url: "http://localhost:5173/thankyou",
                 receipt_email: currentUser.email,
-                
             },
         });
 
@@ -45,12 +34,12 @@ const PaymentGateway = () => {
     };
 
     return (
-        <div className='"max-w-sm rounded overflow-hidden shadow-lg"'  withBorder p={30} mt={30}>
-            
+        <div className='"max-w-sm rounded mt-5 overflow-hidden shadow-lg"' withBorder p={30} mt={30}>
+
             <form onSubmit={handleSubmit}>
-                <h1 order={3} my={30} mx="auto">Secure Payment Gateway</h1>
+                <h1  className='mb-4 text-danger fw-semibold fs-5 text-center' >Secure Payment Gateway</h1>
                 <PaymentElement />
-                <button disabled={!stripe} type="submit" variant='filled' mt={20}>Submit</button>
+                <button disabled={!stripe} type="submit" className='btn btn-primary mb-5 mt-5 mx-auto d-block' variant='filled' mt={20}>Submit</button>
             </form>
         </div>
     )

@@ -98,7 +98,7 @@ function Checkout() {
                     </Form>
                 </Card.Body>
             </Card>
-            <Button variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
+            <Button variant="primary" className='mb-4 mx-auto d-block' onClick={getPaymentIntent}>Pay Now</Button>
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{
                     clientSecret,

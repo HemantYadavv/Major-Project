@@ -37,7 +37,7 @@ const ThankYou = () => {
     };
 
     const retrievePaymentIntent = async () => {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/retrieve-payment-intent`, {
+        const response = await fetch('http://localhost:3000/retrieve-payment-intent', {
             method: 'POST',
             body: JSON.stringify({ paymentIntentId: params.get('payment_intent') }),
             headers: {
@@ -61,7 +61,7 @@ const ThankYou = () => {
 
     return (
         <div>
-            <Navbar />
+          
             <Container fluid="md">
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', flexDirection: 'column' }}>
                     {
