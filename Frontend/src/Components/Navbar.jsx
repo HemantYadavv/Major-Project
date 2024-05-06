@@ -52,40 +52,40 @@ const Navbar = () => {
           </div>
           <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li>
-              <Link to="/" className="nav-link px-2 fs-5 fw-semibold" style={{color:"brown",fontFamily:"serif"}}>
+              <Link to="/" className="nav-link px-2 fs-5 fw-semibold" style={{ color: "brown", fontFamily: "serif" }}>
                 Home
               </Link>
             </li>
 
 
             <li>
-              <Link to="/contact" className="nav-link px-2 fs-5 fw-semibold" style={{color:"brown",fontFamily:"serif"}}>
+              <Link to="/contact" className="nav-link px-2 fs-5 fw-semibold" style={{ color: "brown", fontFamily: "serif" }}>
                 Contact
               </Link>
             </li>
             <li>
-              <Link to="/product" className="nav-link px-2 fs-5 fw-semibold" style={{color:"brown",fontFamily:"serif"}}>
+              <Link to="/product" className="nav-link px-2 fs-5 fw-semibold" style={{ color: "brown", fontFamily: "serif" }}>
                 Product
               </Link>
             </li>
             <li>
-              <Link to="/About" className="nav-link px-2 fs-5 fw-semibold" style={{color:"brown",fontFamily:"serif"}}>
+              <Link to="/About" className="nav-link px-2 fs-5 fw-semibold" style={{ color: "brown", fontFamily: "serif" }}>
                 About
               </Link>
             </li>
             <li>
-            <Link to="Cart"> <button
-                
+              <Link to="Cart"> <button
+
                 className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-              
-             >
-             <p className='d-flex'>
-            <span> <AiOutlineShoppingCart className='text-2xl'  /></span> 
-<span className='badge badge-notification bg-danger rounded text-white' style={{fontSize:"12px"}}>{getCartItemsCount()}</span></p>
+
+              >
+                <p className='d-flex'>
+                  <span> <AiOutlineShoppingCart className='text-2xl' /></span>
+                  <span className='badge badge-notification bg-danger rounded text-white' style={{ fontSize: "12px" }}>{getCartItemsCount()}</span></p>
               </button></Link>
             </li>
             <li>
-              {showLoggedin()}
+             {showLoggedin()}
             </li>
           </ul>
 

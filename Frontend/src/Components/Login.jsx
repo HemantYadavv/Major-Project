@@ -13,7 +13,6 @@ const Login = () => {
     initialValues: {
       email: "",
       password: "",
-      
     },
 
 

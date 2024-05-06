@@ -1,7 +1,7 @@
-import useCartContext from '../Context/CartContext';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { IoSearch } from 'react-icons/io5';
+import useCartContext from '../Context/CartContext';
 
 const Product = () => {
 

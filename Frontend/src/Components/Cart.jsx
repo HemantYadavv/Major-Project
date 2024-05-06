@@ -16,7 +16,7 @@ const Cart = () => {
   const [productList, setproductList] = useState([]);
 
   const fetchUserData = async () => {
-    const res = await fetch('http://localhost:3000/product/getall');
+    const res = await fetch('http://localhost:3zzzzz000/product/getall');
 
     console.log(res.status);
     if (res.status === 200) {
