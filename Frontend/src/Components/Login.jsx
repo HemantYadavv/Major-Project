@@ -1,12 +1,12 @@
 import React from 'react'
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
 import useAppContext from '../Context/AppContext';
 
 const Login = () => {
-
+const navigate = useNavigate();
   const {setLoggedIn, setCurrentUser} = useAppContext();
 
   const loginForm = useFormik({
@@ -38,7 +38,7 @@ const Login = () => {
         console.log(data);
         setCurrentUser(data);
         sessionStorage.setItem("user",JSON.stringify(data));
-        // navigate('/Contact');
+        navigate('/User/profile');
       } else {
         toast("Something went wrong")
       }

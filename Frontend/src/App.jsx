@@ -34,6 +34,7 @@ import OrderHistory from "./Components/Orders";
 import ThankYou from "./Components/Thankyou";
 import User from "./Components/User/Index";
 import Profile from "./Components/User/profile";
+import Edit from "./Components/User/Edit";
 
 // import Showpiece from "./Components/Showpieces";
 const App = () => {
@@ -79,6 +80,7 @@ const App = () => {
 
                 <Route path="/User" element={<User />}>
                 <Route path="profile" element={<Profile />} />
+                <Route path="edit" element={<Edit />} />
 
                 </Route>
                 
