@@ -54,8 +54,11 @@ const ManageProduct = () => {
         ))
     }
 
+<<<<<<< HEAD
+=======
 
  
+>>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
     return (
         <div>
 

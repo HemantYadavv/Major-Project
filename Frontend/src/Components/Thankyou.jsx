@@ -61,7 +61,11 @@ const ThankYou = () => {
 
     return (
         <div>
+<<<<<<< HEAD
+       
+=======
           
+>>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
             <Container fluid="md">
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh', flexDirection: 'column' }}>
                     {

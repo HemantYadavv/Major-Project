@@ -31,7 +31,7 @@ function Checkout() {
     const pincodeRef = useRef();
     const contactRef = useRef();
     
-    const stripePromise = loadStripe('pk_test_51OfemmSAfzZtNsjPArIjjac6Mgz9TpxlhHcrFIBOG7tE4NZrWXEN9rxbQFzUZ3cJQ7mQORbyVCfCpMtqhRwIWOVL00mZBYhk3d');
+    const stripePromise = loadStripe('pk_test_51OtbImSCo3t0CfVMha2MdSb27NqTzBEzqgmMDDNWu3P4R11ev8xPHw09Kv1cZMKQ21cvDD9s2hx9NAZVSZO50GJ7008CExSX6B');
     const getPaymentIntent = async () => {
         const shipping = {
             name: currentUser.name,
@@ -95,10 +95,15 @@ function Checkout() {
                             <FormLabel>Shipping Address</FormLabel>
                             <Form.Control ref={addressRef} style={{border:"1px solid gray"}} as="textarea" rows={8} />
                         </FormGroup>
+                        <Button className='mt-4' variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
                     </Form>
                 </Card.Body>
             </Card>
+<<<<<<< HEAD
+            
+=======
             <Button variant="primary" className='mb-4 mx-auto d-block' onClick={getPaymentIntent}>Pay Now</Button>
+>>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{
                     clientSecret,
