@@ -1,7 +1,7 @@
-import useCartContext from '../Context/CartContext';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react'
 import { IoSearch } from 'react-icons/io5';
+import useCartContext from '../Context/CartContext';
 
 const Product = () => {
 
@@ -38,7 +38,7 @@ const Product = () => {
 
         return productList.map((product) => (
             <>
-                <div className="col-md-3 m-2 shadow-lg">
+                <div className="col-md-3 p-2 shadow-lg">
                     <Link href={`/ViewProduct/${product._id}`}> <img src={'http://localhost:3000/' + product.image} alt="" className="w-100  py-1 " style={{ objectFit: "cover", height: 200 }} />
                     </Link>
                     <h2 className=' fw-semibold fs-5 mt-3 mb-3 text-center'>{product.pname}</h2>
@@ -63,13 +63,10 @@ const Product = () => {
                             onChange={filterproduct} className="form-control " placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                         <button className="px-4 fs-5" id="basic-addon2"><IoSearch /></button>
                     </div>
-
-
                 </form>
 
                 <div className="container-fluid ">
                     <div className="row ">
-
                         {displayproductData()}
                     </div>
                 </div>

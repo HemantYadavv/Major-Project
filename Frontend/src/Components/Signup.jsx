@@ -10,6 +10,7 @@ const Signup = () => {
     initialValues: {
       name: "",
       email: "",
+      avatar:"",
       password: "",
       cpassword: ""
     },
@@ -31,7 +32,11 @@ const Signup = () => {
       action.resetForm();
 
       if (res.status === 200) {
+<<<<<<< HEAD
         toast('Contact form submitted successfully')
+=======
+        toast('Signupp successful successfully')
+>>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
         navigate('/Login');
       } else {
         toast("Something went wrong")
@@ -73,6 +78,7 @@ const Signup = () => {
               <input
                 type="text"
                 id="name"
+                required=""
                 value={signupForm.values.name}
                 onChange={signupForm.handleChange}
                 className="plc form-control form-control-lg"
@@ -85,7 +91,21 @@ const Signup = () => {
               <input
                 type="email"
                 id="email"
+                required=""
                 value={signupForm.values.email}
+                onChange={signupForm.handleChange}
+                className="plc form-control form-control-lg"
+              />
+            </div>
+            <div className=" mb-4">
+              <label className=" text-dark form-label" htmlFor="form2Example28">
+                Image
+              </label>
+              <input
+                type="file"
+                id="avatar"
+                required=""
+                value={signupForm.values.avatar}
                 onChange={signupForm.handleChange}
                 className="plc form-control form-control-lg"
               />
@@ -97,6 +117,7 @@ const Signup = () => {
               <input
                 type="password"
                 id="password"
+                required=""
                 value={signupForm.values.password}
                 onChange={signupForm.handleChange}
                 className="plc form-control form-control-lg"
@@ -111,6 +132,7 @@ const Signup = () => {
                 id="cpassword"
                 value={signupForm.values.cpassword}
                 onChange={signupForm.handleChange}
+                required=""
                 className="plc form-control form-control-lg"
               />
             </div>

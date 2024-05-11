@@ -6,15 +6,23 @@ import toast from 'react-hot-toast';
 import useAppContext from '../Context/AppContext';
 
 const Login = () => {
+<<<<<<< HEAD
 
   const { setLoggedIn, setCurrentUser } = useAppContext();
   const navigate = useNavigate();
+=======
+const navigate = useNavigate();
+  const {setLoggedIn, setCurrentUser} = useAppContext();
+>>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
 
   const loginForm = useFormik({
     initialValues: {
       email: "",
       password: "",
+<<<<<<< HEAD
 
+=======
+>>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
     },
 
 
@@ -34,7 +42,21 @@ const Login = () => {
       action.resetForm();
 
       if (res.status === 200) {
+<<<<<<< HEAD
         toast("Login Successfull")
+=======
+        toast('Login successfully')
+        setLoggedIn(true);
+        const data = await res.json();
+        console.log(data);
+        setCurrentUser(data);
+        sessionStorage.setItem("user",JSON.stringify(data));
+        navigate('/User/profile');
+      } else {
+        toast("Something went wrong")
+      }
+    },
+>>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
 
         setLoggedIn(true);
 
