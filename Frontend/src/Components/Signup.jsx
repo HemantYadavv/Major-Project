@@ -2,8 +2,9 @@ import React from 'react'
 import './Login.css';
 import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 const Signup = () => {
+  const navigate = useNavigate()
 
   const signupForm = useFormik({
     initialValues: {
@@ -31,7 +32,7 @@ const Signup = () => {
 
       if (res.status === 200) {
         toast('Contact form submitted successfully')
-        // navigate('/Contact');
+        navigate('/Login');
       } else {
         toast("Something went wrong")
       }

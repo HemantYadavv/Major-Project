@@ -99,11 +99,7 @@ function Checkout() {
                     </Form>
                 </Card.Body>
             </Card>
-<<<<<<< HEAD
-            
-=======
             <Button variant="primary" className='mb-4 mx-auto d-block' onClick={getPaymentIntent}>Pay Now</Button>
->>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{
                     clientSecret,

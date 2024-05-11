@@ -196,7 +196,6 @@ const Home = () => {
                   <p className="mt-4 text-lg leading-relaxed text-gray-600">
                     Mitti Mahal endeavors to create a positive impact on the lives of small artisans, customers, communities, and the environment, fostering a more inclusive, sustainable, and culturally rich society.
                     We emphasizes Mitti Mahal's commitment to empowering small artisans through e-commerce, facilitating their growth, and promoting ethical consumption practices while preserving traditional craftsmanship and cultural heritage.
-
                   </p>
                 </div>
               </div>

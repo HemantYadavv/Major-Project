@@ -29,12 +29,11 @@ import Decoration from "./Components/Decoration";
 import WaterBottle from "./Components/WaterBottle";
 import Utensil from "./Components/Utensil";
 import Checkout from "./Components/Checkout/Checkout";
-<<<<<<< HEAD
-=======
 import { AppProvider } from "./Context/AppContext";
 import OrderHistory from "./Components/Orders";
->>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
 import ThankYou from "./Components/Thankyou";
+import Feedback from "./Components/Feedback";
+
 
 // import Showpiece from "./Components/Showpieces";
 const App = () => {
@@ -63,19 +62,14 @@ const App = () => {
         {/* <Route path="/Products" element ={<Product />}/> */}
         <Route path="/product" element ={<Product/>}/>
         <Route path="/Cart" element ={<Cart/>}/>
+        <Route path="/Feedback" element ={<Feedback/>}/>
+
+
         <Route path="/Checkout" element ={<Checkout/>}/>
         <Route path="/Order" element ={<OrderHistory/>}/>
         <Route path="/contact" element ={<Contact/>}/>
         <Route path="/adminlogin" element ={<AdminLogin/>}/>
         <Route path="/adminsignup" element ={<AdminSignup/>}/>
-<<<<<<< HEAD
-        <Route path="/Checkout" element ={<Checkout/>}/>
-        <Route path="/thankyou" element = {<ThankYou />}/>
-       
-      
-
-=======
->>>>>>> 11e38de3f25fc5bbc4c839f94e19af334cebbf38
         <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
         <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
         <Route path="/Admin" element ={<Admin />}>

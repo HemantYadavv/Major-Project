@@ -39,7 +39,8 @@ const Sidebar = () => {
       </li>
       <li>
         <Link to="/Admin/ManageProduct">
-          <i className="bx bx-pie-chart-alt-2" /> 
+       
+        <i className="bx bx-cart-alt" />
           <span className="links_name">Manage Product</span>
         </Link>
         <span className="tooltip">Manage Product</span>
@@ -47,19 +48,19 @@ const Sidebar = () => {
 
       <li>
         <Link to="/Admin/ManageOrder">
-          <i className="bx bx-cart-alt" />
+        <i class='bx bxs-shopping-bags'></i>
           <span className="links_name">Manage Order</span>
         </Link>
         <span className="tooltip">Manage Order</span>
       </li>
    
-      <li>
+      {/* <li>
         <a href="#">
           <i className="bx bx-cog" />
           <span className="links_name">Setting</span>
         </a>
         <span className="tooltip">Setting</span>
-      </li>
+      </li> */}
       <li className="profile">
         <div className="profile-details">
           <img
@@ -75,9 +76,7 @@ const Sidebar = () => {
       </li>
     </ul>
   </div>
-  {/* <section className="home-section">
-    <div className="text">Hello</div>
-  </section> */}
+
 </>
 
   </>

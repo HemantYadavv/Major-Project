@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import useCartContext from '../Context/CartContext';
 import useAppContext from '../Context/AppContext';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import UserProfileDropdown from './UserProfileDropdown';
 
 const Navbar = () => {
   const { loggedIn, logout } = useAppContext();
@@ -15,13 +16,15 @@ const Navbar = () => {
         <div className="container d-flex flex-wrap justify-content-end ">
 
           <div className="text-end">
-            <button onClick={logout} type="button" className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded ">
+            <button onClick={logout} type="button" className="bg-red-600 hover:bg-red-700 text-white px-3 mt-2 py-1 rounded ">
               Logout
             </button>
-
+            </div>
+           
+            
           </div>
         </div>
-      </div>
+    
       );
     } else {
       return <div className=" ">
