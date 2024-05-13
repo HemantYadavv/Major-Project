@@ -10,6 +10,7 @@ export const CartProvider = ({ children }) => {
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
     }, [cartItems])
+    
     const addItemToCart = (item) => {
         const exist = cartItems.find((cartItem) => cartItem._id === item._id);
         if (exist) {
