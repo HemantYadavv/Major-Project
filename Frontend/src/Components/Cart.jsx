@@ -45,8 +45,8 @@ const Cart = () => {
       <div className="text-center">
         {/* <p alt="login form" className='rounded-start mt-4 w-25 text-center' /> */}
         <h3>Your Cart is Currently Empty!</h3>
-        <p className="text-muted">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
-        <Link to="/product" className="btn rounded-pill" style={{ backgroundColor: "#4BCCF2", color: "#fff" }} >Return To Shop</Link>
+        <p className="text-muted mt-1">Before proceed to checkout you must add some products to your shopping cart. <br />You will fill a lot of interesting products on our "Product" page.</p>
+        <Link to="/product" className="btn rounded-pill mt-3" style={{ backgroundColor: "#4BCCF2", color: "#fff" }} >Return To Shop</Link>
       </div>
     );
     return cartItems.map((item) => (
@@ -78,7 +78,7 @@ const Cart = () => {
                     <h2 className="my-2"> ₹ {item.pprice}</h2>
                     </div>
                     <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" className="text-muted">
+                      <a href="#!" className="text-muted" onClick={e => removeItemFromCart(item)}>
                         <i className="fas fa-times" />
                       </a>
                     </div>

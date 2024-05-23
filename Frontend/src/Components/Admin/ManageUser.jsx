@@ -56,9 +56,9 @@ const ManageProduct = () => {
     return (
         <div>
 
-            <header className="bg-danger text-white ">
+            <header className="bg-warning text-white ">
                 <div className="container py-3">
-                    <h1 className="text-center fs-5">Manage User</h1>
+                    <h1 className="text-center text-black fw-semibold fs-5">Manage User</h1>
 
                 </div>
             </header>

@@ -95,7 +95,7 @@ function Checkout() {
                             <FormLabel>Shipping Address</FormLabel>
                             <Form.Control ref={addressRef} style={{border:"1px solid gray"}} as="textarea" rows={8} />
                         </FormGroup>
-                        <Button className='mt-4' variant="primary" onClick={getPaymentIntent}>Pay Now</Button>
+                        {/* <Button className='mt-4' variant="primary" onClick={getPaymentIntent}>Pay Now</Button> */}
                     </Form>
                 </Card.Body>
             </Card>

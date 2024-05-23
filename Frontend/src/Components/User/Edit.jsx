@@ -1,7 +1,7 @@
 
 import { useFormik } from 'formik';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+
 import toast from 'react-hot-toast'
 
 const Edit = () => {
@@ -172,7 +172,7 @@ const Edit = () => {
                         Bio
                       </label>
                       <textarea
-                        id="message"
+                        id="bio"
                         onChange={useForm.handleChange}
                         value={useForm.values.bio}
                         rows={4}
@@ -192,6 +192,7 @@ const Edit = () => {
                       <button
                         type="submit"
                         className="text-white btn btn-primary"
+                        
                       >
                         Save
                       </button>

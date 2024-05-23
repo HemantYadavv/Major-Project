@@ -99,7 +99,7 @@ const About = () => {
             {displayfeedbackData()}
           </div>
         </div>
-       <Link to="/Feedback"> <button className="btn btn-danger text-white w-25 m-auto block mt-4">Give Feedback</button>
+       <Link to="/Feedback"> <button className="btn btn-danger  mb-12 text-white w-25 m-auto block mt-4">Give Feedback</button>
        </Link>
       </div>
 

@@ -7,6 +7,7 @@ const UserRouter = require('./Routers/User')
 const ProductRouter = require('./Routers/Product')
 const UtilRouter = require('./Routers/Utils')
 const contactRouter = require('./Routers/contact')
+const feedbackRouter = require('./Routers/Feedback')
 const orderRouter = require('./Routers/Order')
 
 const stripe = require('stripe')('sk_test_51OtbImSCo3t0CfVM6noABhDAoxIYnl7Z8V80ql9PByozdDNg3wSPLRiix4MkQYV4VdlwJAxwKQ09263JoO91Zowy00guHYk7WS');
@@ -22,6 +23,7 @@ app.use('/product', ProductRouter)
 app.use('/contact', contactRouter)
 app.use('/util', UtilRouter)
 app.use('/order', orderRouter);
+app.use('/feedback', feedbackRouter);
 app.use(express.static ('./Uploads'))
 
 app.get('/get-permission', (req, res) => {

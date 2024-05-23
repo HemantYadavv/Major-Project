@@ -32,11 +32,7 @@ const Signup = () => {
       action.resetForm();
 
       if (res.status === 200) {
-<<<<<<< HEAD
-        toast('Contact form submitted successfully')
-=======
         toast('Signupp successful successfully')
->>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
         navigate('/Login');
       } else {
         toast("Something went wrong")

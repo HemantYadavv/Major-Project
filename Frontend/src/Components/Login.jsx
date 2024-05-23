@@ -6,23 +6,13 @@ import toast from 'react-hot-toast';
 import useAppContext from '../Context/AppContext';
 
 const Login = () => {
-<<<<<<< HEAD
-
-  const { setLoggedIn, setCurrentUser } = useAppContext();
-  const navigate = useNavigate();
-=======
 const navigate = useNavigate();
   const {setLoggedIn, setCurrentUser} = useAppContext();
->>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
 
   const loginForm = useFormik({
     initialValues: {
       email: "",
       password: "",
-<<<<<<< HEAD
-
-=======
->>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
     },
 
 
@@ -42,43 +32,25 @@ const navigate = useNavigate();
       action.resetForm();
 
       if (res.status === 200) {
-<<<<<<< HEAD
-        toast("Login Successfull")
-=======
         toast('Login successfully')
         setLoggedIn(true);
         const data = await res.json();
         console.log(data);
         setCurrentUser(data);
         sessionStorage.setItem("user",JSON.stringify(data));
-        navigate('/User/profile');
+        if (data.role === 'admin') {
+          sessionStorage.setItem('admin', JSON.stringify(data));
+          navigate('/Admin/AdminDashboard');
+      } else {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          navigate('/Product');
+      }
       } else {
         toast("Something went wrong")
       }
     },
->>>>>>> 67dd1df30549437594dbcb1792073ddf76accb43
-
-        setLoggedIn(true);
-
-        const data = await res.json();
-        setCurrentUser(data)
-        sessionStorage.setItem('isloggedin', true);
-        if (data.role === 'admin') {
-          sessionStorage.setItem('admin', JSON.stringify(data))
-          navigate('/Admin/AdminDashboard');
-        } else {
-          sessionStorage.setItem("user", JSON.stringify(data));
-          navigate("/")
-        }
-      } else if (res.status === 400){
-        toast("Invalid Credentials")
-      }
-
-
-
-
-    }
   })
+  
   return (
 
     <div className="container-fluid vh-80 w-75">
@@ -125,9 +97,9 @@ const navigate = useNavigate();
                 </button>
               </div>
               <p className="small mb-5 pb-lg-2">
-                <a className="text-muted" href="#!">
+                <Link to={"/Resetform"} className="text-muted" >
                   Forgot password?
-                </a>
+                </Link>
               </p>
               <p>
                 Don't have an account?{" "}

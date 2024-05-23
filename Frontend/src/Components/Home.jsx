@@ -35,7 +35,7 @@ const Home = () => {
               <div className="w-full lg:w-8/12 px-4 ml-auto mr-auto text-center">
                 <div className="w-100">
                   <h1 className="text-white font-semibold text-5xl">
-                    Discover the Beauty of Clay
+                    Discover the Beauty Of Clay 
                   </h1>
                   <p className="mt-4 text-lg text-gray-300">
                     Mitti Mahal offers a unique retreat where nature meets luxury.
