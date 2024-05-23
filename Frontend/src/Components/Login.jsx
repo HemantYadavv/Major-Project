@@ -38,7 +38,15 @@ const navigate = useNavigate();
         console.log(data);
         setCurrentUser(data);
         sessionStorage.setItem("user",JSON.stringify(data));
-        navigate('/User/profile');
+        if (data.role === 'admin') {
+          sessionStorage.setItem('admin', JSON.stringify(data));
+          navigate('/Admin');
+      } else {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          navigate('/User/profile');
+
+      }
+       
       } else {
         toast("Something went wrong")
       }
