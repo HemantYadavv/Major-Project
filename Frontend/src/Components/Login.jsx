@@ -40,11 +40,21 @@ const navigate = useNavigate();
         sessionStorage.setItem("user",JSON.stringify(data));
         if (data.role === 'admin') {
           sessionStorage.setItem('admin', JSON.stringify(data));
+<<<<<<< HEAD
           navigate('/Admin/AdminDashboard');
       } else {
           sessionStorage.setItem('user', JSON.stringify(data));
           navigate('/Product');
       }
+=======
+          navigate('/Admin');
+      } else {
+          sessionStorage.setItem('user', JSON.stringify(data));
+          navigate('/User/profile');
+
+      }
+       
+>>>>>>> b224631cce943f7c716ab1d22af42375432bd769
       } else {
         toast("Something went wrong")
       }

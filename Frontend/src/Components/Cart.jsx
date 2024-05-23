@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import useCartContext from '../Context/CartContext';
-
 import {Link} from 'react-router-dom';
-
-
-
 import { useParams } from 'react-router-dom';
 
 const Cart = () => {
 
   const { id } = useParams();
-
-
-
   const [productList, setproductList] = useState([]);
 
   const fetchUserData = async () => {
-    const res = await fetch('http://localhost:3zzzzz000/product/getall');
+    const res = await fetch('http://localhost:3000/product/getall');
 
     console.log(res.status);
     if (res.status === 200) {
@@ -151,14 +144,22 @@ const Cart = () => {
                     <h5 className="text-uppercase">Total price</h5>
                     <p>Total: {getCartTotal()}</p>
                   </div>
+<<<<<<< HEAD
                   <Link to="/Checkout"
+=======
+                  <Link to ='/Checkout'
+>>>>>>> b224631cce943f7c716ab1d22af42375432bd769
                     type="button"
                     data-mdb-button-init=""
                     data-mdb-ripple-init=""
                     className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark"
                   >
+<<<<<<< HEAD
                    Checkout
+=======
+                    Checkout
+>>>>>>> b224631cce943f7c716ab1d22af42375432bd769
                   </Link>
                 </div>
               </div>

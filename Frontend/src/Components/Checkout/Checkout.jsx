@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Button, Card, Form, FormGroup, FormLabel } from 'react-bootstrap';
 import * as Yup from 'yup';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js'; 
 import PaymentGateway from './PaymentGateway';
 import { Elements } from '@stripe/react-stripe-js';
 import useCartContext from '../../Context/CartContext';
@@ -99,7 +99,11 @@ function Checkout() {
                     </Form>
                 </Card.Body>
             </Card>
+<<<<<<< HEAD
             <Button variant="primary" className='mb-4 mx-auto d-block' onClick={getPaymentIntent}>Pay Now</Button>
+=======
+            
+>>>>>>> b224631cce943f7c716ab1d22af42375432bd769
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{
                     clientSecret,

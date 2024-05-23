@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 
-
 const ManageProduct = () => {
     const [Data, setData] = useState([]);
-
-
     //User fetch func
     const fetchUserData = async () => {
         const res = await fetch('http://localhost:3000/product/getall');
@@ -17,7 +14,6 @@ const ManageProduct = () => {
             setData(data);
         }
     }
-
     useEffect(() => {
         fetchUserData();
     }, [])
@@ -32,8 +28,6 @@ const ManageProduct = () => {
             fetchUserData();
         }
     }
-
-
     //User Display func
     const displayUsers = () => {
         return Data.map((obj) => (
@@ -54,8 +48,11 @@ const ManageProduct = () => {
         ))
     }
 
+<<<<<<< HEAD
 
  
+=======
+>>>>>>> b224631cce943f7c716ab1d22af42375432bd769
     return (
         <div>
 
