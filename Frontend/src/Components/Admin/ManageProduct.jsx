@@ -48,11 +48,6 @@ const ManageProduct = () => {
         ))
     }
 
-<<<<<<< HEAD
-
- 
-=======
->>>>>>> b224631cce943f7c716ab1d22af42375432bd769
     return (
         <div>
 

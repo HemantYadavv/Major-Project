@@ -54,55 +54,6 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home />} />
 
-<<<<<<< HEAD
-        <Route path="/About" element ={<About/>}/>
-        <Route path="/login" element ={<Login/>}/>
-        <Route path="/signup" element ={<Signup/>}/>
-      
-        <Route path="/productList" element ={<ProductList/>}/>
-        <Route path="/Showpiece" element ={<Showpiece/>}/>
-        <Route path="/Decoration" element ={<Decoration/>}/>
-        <Route path="/WaterBottle" element ={<WaterBottle/>}/>
-        <Route path="/Utensil" element ={<Utensil/>}/>
-        <Route path="/thankyou" element ={<ThankYou/>}/>
-        {/* <Route path="/productList" element ={<ProductList/>}/> */}
-        {/* <Route path="/Products" element ={<Product />}/> */}
-        <Route path="/product" element ={<Product/>}/>
-        <Route path="/Cart" element ={<Cart/>}/>
-        <Route path="/Feedback" element ={<Feedback/>}/>
-        <Route path="/Resetform" element ={<ResetForm/>}/>
-       
-
-
-        <Route path="/Checkout" element ={<Checkout/>}/>
-        <Route path="/Order" element ={<OrderHistory/>}/>
-        <Route path="/contact" element ={<Contact/>}/>
-        <Route path="/adminlogin" element ={<AdminLogin/>}/>
-        <Route path="/adminsignup" element ={<AdminSignup/>}/>
-        <Route path="/viewProduct/:id" element ={<ViewProduct/>}/>
-        <Route path="/updateProduct/:id" element ={<UpdateProduct/>}/>
-
-        <Route path="/Admin" element ={<Admin />}>
-          <Route path="AdminDashboard" element={<AdminDashboard/>} />
-          <Route path="ManageUser" element ={<ManageUser/>}/>
-        <Route path="AddProduct" element ={<Addproduct/>}/>
-        <Route path="ManageOrder" element ={<ManageOrder/>}/>
-        <Route path="ManageProduct" element ={<ManageProduct/>}/>
-        </Route>
-
-        <Route path="user" element={<User/>}>
-          <Route path="profile" element={<Profile/>}/>
-          <Route path="Edit" element={<Edit />}/>
-           
-        </Route>
-      </Routes>
-      </AppProvider>
-</CartProvider>
-      </SnackbarProvider>
-      </BrowserRouter>
-
-    </div>
-=======
 
                 <Route path="/About" element={<About />} />
                 <Route path="/login" element={<Login />} />
@@ -146,7 +97,6 @@ const App = () => {
         </SnackbarProvider>
 </BrowserRouter>
 </div>
->>>>>>> b224631cce943f7c716ab1d22af42375432bd769
   )
 }
 

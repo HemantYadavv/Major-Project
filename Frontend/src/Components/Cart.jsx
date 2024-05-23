@@ -144,22 +144,14 @@ const Cart = () => {
                     <h5 className="text-uppercase">Total price</h5>
                     <p>Total: {getCartTotal()}</p>
                   </div>
-<<<<<<< HEAD
-                  <Link to="/Checkout"
-=======
                   <Link to ='/Checkout'
->>>>>>> b224631cce943f7c716ab1d22af42375432bd769
                     type="button"
                     data-mdb-button-init=""
                     data-mdb-ripple-init=""
                     className="btn btn-dark btn-block btn-lg"
                     data-mdb-ripple-color="dark"
                   >
-<<<<<<< HEAD
-                   Checkout
-=======
                     Checkout
->>>>>>> b224631cce943f7c716ab1d22af42375432bd769
                   </Link>
                 </div>
               </div>
