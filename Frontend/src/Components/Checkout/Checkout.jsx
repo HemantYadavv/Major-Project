@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Container, Button, Card, Form, FormGroup, FormLabel } from 'react-bootstrap';
 import * as Yup from 'yup';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe } from '@stripe/stripe-js'; 
 import PaymentGateway from './PaymentGateway';
 import { Elements } from '@stripe/react-stripe-js';
 import useCartContext from '../../Context/CartContext';
